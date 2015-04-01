@@ -1,0 +1,39 @@
+
+/*body{
+	background:url("../images/tiletex.jpg");
+}*/
+
+.gray{
+	background:#353535;
+	color:white;
+}
+
+.tiny{
+	font-size:8px;
+	color:white;
+}
+
+.light{
+	color:white;
+}
+
+.gray_l{
+	background:#454545;
+}
+
+.gray_hl{
+	background:#555;
+}
+
+.row{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.title h3{
+	text-align:center;
+}
+
+.space-fix{
+	margin-top:22px;
+}
