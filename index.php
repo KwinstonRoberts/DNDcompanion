@@ -12,12 +12,17 @@
 			
 			<div class="container gray_hl main">
 				<div class="row">
-					<?php $segment1 = array(array("Character Name", "3"),array("Level", "1")
-					,array("Class", "2"),array("Paragon Path", "2"),array("Epic Destiny", "2")
-					,array("Total XP", "2"));
+					<?php $segment1 = array(array("Character Name", "3",false),array("Level", "1",true)
+					,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
+					,array("Total XP", "2",true));
 					for($i=0; $i<count($segment1); $i++){
-						echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
-						<input class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+						if($segment1[$i][2]){
+							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
+							<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+						}else{
+							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
+							<input class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+						}
 					}?>
 				</div>
 				<div class="row">
