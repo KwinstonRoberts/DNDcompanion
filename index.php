@@ -16,7 +16,7 @@
 					,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
 					,array("Total XP", "2",true));
 					for($i=0; $i<count($segment1); $i++){
-						if($segment1[$i][2]){
+						if($segment1[$i][2]==true){
 							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 							<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
 						}else{
@@ -30,7 +30,7 @@
 					,array("Age", "1",true),array("Gender", "1",true),array("Height", "1",true)
 					,array("Weight", "1",true), array("Alignment", '1',false),array("Diety", '1',false),array("Adventuring Company", '2',false));
 					for($i=0; $i<count($segment2); $i++){
-						if($segment2[$i][2){
+						if($segment2[$i][2]==true){
 							echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
 							<input type="number" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
 						}else{
