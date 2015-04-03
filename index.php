@@ -16,9 +16,15 @@
 					,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
 					,array("Total XP", "2",true));
 					for($i=0; $i<count($segment1); $i++){
+<<<<<<< HEAD
 						if($segment1[$1][2]){
 						echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 						<input class="form-control" type="number"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+=======
+						if($segment1[$i][2]==true){
+							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
+							<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+>>>>>>> e8bd0b2703d550da46c7f18113c6a8db7037d18e
 						}else{
 							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 							<input class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
@@ -26,12 +32,17 @@
 					}?>
 				</div>
 				<div class="row">
-					<?php $segment2 = array(array("Race", "3"),array("Size", "1")
-					,array("Age", "1"),array("Gender", "1"),array("Height", "1")
-					,array("Weight", "1"), array("Alignment", '1'),array("Diety", '1'),array("Adventuring Company", '2'));
+					<?php $segment2 = array(array("Race", "3",false),array("Size", "1",false)
+					,array("Age", "1",true),array("Gender", "1",true),array("Height", "1",true)
+					,array("Weight", "1",true), array("Alignment", '1',false),array("Diety", '1',false),array("Adventuring Company", '2',false));
 					for($i=0; $i<count($segment2); $i++){
-						echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
-						<input class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+						if($segment2[$i][2]==true){
+							echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
+							<input type="number" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+						}else{
+							echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
+							<input class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+						}
 					}?>
 				</div>
 			</div>
