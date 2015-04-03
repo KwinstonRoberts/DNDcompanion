@@ -67,7 +67,7 @@
 	                                <h3 class="target"></h3>
 				  </div>';
 			} 
-			echo '</div>';
+			
 			echo '<div class="row">
 	                        <div class="col-sm-8">
 	                            <label class="tiny"> Conditional Modifiers </label> 
@@ -76,8 +76,7 @@
 				<div class="col-sm-4">
 	                            <button class="btn btn-default space-fix"> Add </button> 
 				</div>
-	                    </div>
-			</div>';
+	        </div>';
 			}
 			$segment4 = array(array("Score", 3,false),array("STRENGTH", 4,true),array("Abil  Mod", 3,false),array("1/2 Lvl", 3,false),
 				array("Score", 2,false),array("CONSTITUTION", 4,true),array("Abil  Mod", 3,false),array("1/2 Lvl", 3,false),
@@ -118,13 +117,13 @@
 				}else{
 					echo '<div class="col-sm-' . $segment4[$l][1] . '">';
 					echo '<input type="number" class="form-control">
+				</div>
 				</div>';
 
 				}
 			}
 		}
 	}?>
-			</div>
 		</div>	
     </body>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
