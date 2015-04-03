@@ -16,15 +16,15 @@
 					,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
 					,array("Total XP", "2",true));
 					for($i=0; $i<count($segment1); $i++){
-<<<<<<< HEAD
+
 						if($segment1[$1][2]){
 						echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 						<input class="form-control" type="number"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
-=======
+
 						if($segment1[$i][2]==true){
 							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 							<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
->>>>>>> e8bd0b2703d550da46c7f18113c6a8db7037d18e
+
 						}else{
 							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 							<input class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
