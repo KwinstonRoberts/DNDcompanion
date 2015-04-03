@@ -18,11 +18,11 @@
 		for($i=0; $i<count($segment1); $i++){
                     if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
-			<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+			<input type="number" name="' . $segment1[$i][0] . '" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
 
                     }else{
 			echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
-			<input class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+			<input name="' . $segment1[$i][0] . '" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
                     }
 		}?>
             </div>
@@ -33,10 +33,10 @@
 		for($i=0; $i<count($segment2); $i++){
                     if($segment2[$i][2]==true){
 			echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
-			<input type="number" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+			<input type="number" name="' . $segment2[$i][0] . '" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
                     }else{
 			echo '<div class=" form-group col-sm-' . $segment2[$i][1] . '">
-			<input class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+			<input name="' . $segment2[$i][0] . '" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
                     }
 		}?>
             </div>
@@ -63,14 +63,14 @@
 			for ($j = 0; $j<5; $j++){
 	        	        echo '<div class="col-sm-' . $segment3[$j][1] . ' gray">
 	        	                    <label class="tiny">' . $segment3[$j][0] . '</label>
-	        	                    <h3 class="target"></h3>
+	        	                    <h3 id="target-' . $segment3[$j][0] .'"></h3>
 				      </div>';
 			} 
 			echo '</div>';
 			echo '<div class="row">
 	                	<div class="col-sm-8">
 	                		<label class="tiny"> Conditional Modifiers </label> 
-					<input class="form-control">
+					<input name="conditional-1-' . $j . '" class="form-control">
 				</div>
 				<div class="col-sm-4">
 	                		<button class="btn btn-default space-fix"> Add </button> 
@@ -111,12 +111,12 @@
 							</div>';
 						}else{				
 							echo '<div class="col-sm-' . $segment4[$m][$l][1] . '">';
-							echo '<input type="number" class="form-control">
+							echo '<input type="number" name="' . $segment4[$m][$l][0] . '" class="form-control">
 							</div>';
 						}
 					}else{
 						echo '<div class="col-sm-' . $segment4[$m][$l][1] . ' gray">';
-						echo   '<h3 class="target"></h3>
+						echo   '<h3 id="target-' . $segment4[$m][$l][0] . '"></h3>
 						</div>';
 					}
 				}
@@ -132,7 +132,7 @@
 				for($o=0;$o<8;$o++){
 		                    echo '<div class="col-sm-' . $segment5[$n][$o][1] . ' gray">
 		                		<label class="tiny">' . $segment5[$n][$o][0] . '</label>
-		                                <h3 class="target"></h3>
+		                                <h3 id="target-' . $segment5[$n][$o][0] . '"></h3>
 					  </div>';
 				}
 				echo  '</div>';
@@ -140,7 +140,7 @@
 				echo '<div class="row">
 		                        <div class="col-sm-8">
 		                            <label class="tiny"> Conditional Modifiers </label> 
-						<input class="form-control">
+						<input name="conditional-2-' . $n . '" class="form-control">
 					</div>
 					<div class="col-sm-4">
 		                            <button class="btn btn-default space-fix"> Add </button> 
