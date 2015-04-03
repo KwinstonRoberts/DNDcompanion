@@ -44,7 +44,7 @@
 			</div>
 			<div class="container gray_l">
 
-					 <? $segment3 = array(array(array("Score", 3),array("Initiative", 4),array("DEX", 2),array("1/2 Lvl", 2),array("Misc", 1)),
+					 <?php $segment3 = array(array(array("Score", 3),array("Initiative", 4),array("DEX", 2),array("1/2 Lvl", 2),array("Misc", 1)),
 					 	array(array("Score", 3),array("AC", 4),array("ACMod", 1),array("Armor", 1),array("Class", 1), array('misc', 1),array('misc',1)), 
 					 	array(array('Score', 3),array('DEX',4),array('mod',3),array('misc',2)));
 					for($i=0; $i<count($segment3); $i++){
