@@ -76,7 +76,7 @@
 			</div>
                     </div>
 		</div>';
-		}?>
+		?>
 		</div>
 		<div class="container gray_l">
 			<div class="col-sm-4">
