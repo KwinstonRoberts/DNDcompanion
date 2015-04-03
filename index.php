@@ -107,7 +107,7 @@
 				if($segment4[$l][2]){
 
 					echo '<div class="col-sm-' . $segment4[$l][1] . '">';
-						echo '<h4>' . $segment[$l][0] . '<h4>
+						echo '<h4>' . $segment[$l][0] . '</h4>
 						</div>';
 				}else{
 					if(($segment4[$l]-20)%3 == 0 || ($segment4[$l]-20)%4 == 0){
