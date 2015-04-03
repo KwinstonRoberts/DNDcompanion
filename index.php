@@ -91,21 +91,23 @@
 				<p class="tiny"> Mod + 1/2 lvl </p>
 			</div>
 			<?php
-			for ($l = 0; $l<23; $l+4){
-				for ($k = 5; $k<23; $k+$l){
+				$count = 0;
+				for ($k = 5; $k<23; $k++){
+
 						echo '<div class="row">
-									<div class="col-sm-' . $segment3[$i][$k][1] . 'gray">';
+									<div class="col-sm-' . $segment3[$i][$k+ count][1]  . 'gray">';
 										if ($segment3[$i][$k][2]){
 								echo	'<input type = "number" class="form-control">
 					 		 </div>';
-					  	}else if(!$segment3[$i][$k][2] && !$segment3[$i][$k][3]){
+					  	}else if(!$segment3[$i][$k+count][2] && !$segment3[$i][$k+ count][3]){
 					  		echo '<h3 class="target"></h3>
 					  				</div>';
 					  	}else{
-					  		echo '<h3>' .  $segment3[$i][$k][0] . '</h3>';
+					  		echo '<h3>' .  $segment3[$i][$k + count][0] . '</h3>';
 					  	}
 					}
 				}
+				count +=4;
 			}?>
         </div>
     </body>
