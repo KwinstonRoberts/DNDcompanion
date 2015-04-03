@@ -42,7 +42,7 @@
             </div>
 	</div>
 	<div class="container gray_l">
-            <?php $segment3 = array(array(array("Score", 3),array("Initiative", 4),array("DEX", 2),array("1/2 Lvl", 2),array("Misc", 1), array('score', 2, true,false), array('STRENGTH', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('CONSTITUTION', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('DEXTERITY', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('INTELLIGENCE', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('WISDOM', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('CHARISMA', 4, false,true), array('Abil Mod', 3), array('Mod + 1/2 lvl', 3)),
+            <?php $segment3 = array(array(array("Score", 3),array("Initiative", 4),array("DEX", 2),array("1/2 Lvl", 2),array("Misc", 1), array('score', 2, true,false), array('STRENGTH', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3),array('score', 2, true,false), array('CONSTITUTION', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3,false,false),array('score', 2, true,false), array('DEXTERITY', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3,false,false),array('score', 2, true,false), array('INTELLIGENCE', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3,false,false),array('score', 2, true,false), array('WISDOM', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3,false,false),array('score', 2, true,false), array('CHARISMA', 4, false,true), array('Abil Mod', 3,false,false), array('Mod + 1/2 lvl', 3,false,false)),
             array(array("Score", 3),array("AC", 4),array("ACMod", 1),array("Armor", 1),array("Class", 1), array('misc', 1),array('misc',1)), 
             array(array('Score', 3),array('DEX',4),array('mod',3),array('misc',2)));
             for($i=0; $i<count($segment3); $i++){
@@ -77,7 +77,6 @@
                     </div>
 		</div>';
 		?>
-
 		<div class="row">
 			<div class="col-sm-2">
 				<p class="tiny"> Score </p>
@@ -91,12 +90,11 @@
 			<div class="col-sm-3">
 				<p class="tiny"> Mod + 1/2 lvl </p>
 			</div>
-
 			<?php
 			for ($l = 0; $l<23; $l+4){
 				for ($k = 5; $k<23; $k+$l){
 						echo '<div class="row">
-									<div class="col-sm-' . $segment3[$i][$k][1] . 'gray">'
+									<div class="col-sm-' . $segment3[$i][$k][1] . 'gray">';
 										if ($segment3[$i][$k][2]){
 								echo	'<input type = "number" class="form-control">
 					 		 </div>';
