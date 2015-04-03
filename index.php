@@ -106,8 +106,7 @@
 					  		echo '<h3>' .  $segment3[$i][$k + count][0] . '</h3>';
 					  	}
 					}
-				}
-				count +=4;
+				$count +=4;
 			}?>
         </div>
     </body>
