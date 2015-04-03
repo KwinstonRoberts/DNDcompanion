@@ -104,7 +104,7 @@
 			</div>';
 
 			for ($l=0;$l<24; $l++){
-				if($segment[$l][2]){
+				if($segment4[$l][2]){
 
 					echo '<div class="col-sm-' . $segment4[$l][1] . '">';
 						echo '<h4>' . $segment[$l][0] . '<h4>
