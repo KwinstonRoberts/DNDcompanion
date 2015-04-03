@@ -17,10 +17,6 @@
 					,array("Total XP", "2",true));
 					for($i=0; $i<count($segment1); $i++){
 
-						if($segment1[$1][2]){
-						echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
-						<input class="form-control" type="number"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
-
 						if($segment1[$i][2]==true){
 							echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
 							<input type="number" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
@@ -82,8 +78,7 @@
 						</div>
 					</div>
 				</div>';
-			}
-		}?>
+			}?>
 			</div>
 		</body>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
