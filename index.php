@@ -13,8 +13,8 @@
 	<div class="container gray_hl main">
             <div class="row">
                 <?php $segment1 = array(array("Character Name", "3",false),array("Level", "1",true)
-		,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
-		,array("Total XP", "2",true));
+                                ,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
+                                ,array("Total XP", "2",true));
 		for($i=0; $i<count($segment1); $i++){
                     if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-sm-' . $segment1[$i][1] . '">
