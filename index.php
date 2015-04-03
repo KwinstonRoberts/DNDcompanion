@@ -79,40 +79,45 @@
 		?>
 		</div>
 		<div class="container gray_l">
-			<div class="row">
-				<div class="col-sm-2">
-					<p class="tiny"> Score </p>
+			<div class="col-sm-4">
+				<div class="col-sm-12 title gray">'
+					<h3> ABILITY SCORES</h3>
+				<div class="row">
+					<div class="col-sm-2">
+						<p class="tiny"> Score </p>
+					</div>
+					<div class="col-sm-4">
+						<p class="tiny"> Ability </p>
+					</div>
+					<div class="col-sm-3">
+						<p class="tiny"> Abil Mod </p>
+					</div>
+					<div class="col-sm-3">
+						<p class="tiny"> Mod + 1/2 lvl </p>
+					</div>
 				</div>
-				<div class="col-sm-4">
-					<p class="tiny"> Ability </p>
-				</div>
-				<div class="col-sm-3">
-					<p class="tiny"> Abil Mod </p>
-				</div>
-				<div class="col-sm-3">
-					<p class="tiny"> Mod + 1/2 lvl </p>
-				</div>
-			</div>
-				<?php
-					$count = 0;
-					for ($k = 5; $k<23; $k++){
+					<?php
+						$count = 0;
+						for ($k = 5; $k<23; $k++){
 
-							echo '<div class="row">
-										<div class="col-sm-' . $segment3[$i][$k+ count][1]  . 'gray">';
-											if ($segment3[$i][$k][2]){
-									echo	'<input type = "number" class="form-control">
-						 		 </div>';
-						  	}else if(!$segment3[$i][$k+count][2] && !$segment3[$i][$k+ count][3]){
-						  		echo '<h3 class="target"></h3>';
-						  				
-						  	}else{
-						  		echo '<h4>' .  $segment3[$i][$k + count][0] . '</h4>';
-						  	}
-						  	echo '</div>';
-						}
-					$count +=4;
-				}?>
+								echo '<div class="row">
+											<div class="col-sm-' . $segment3[$i][$k+ count][1]  . 'gray">';
+												if ($segment3[$i][$k][2]){
+										echo	'<input type = "number" class="form-control">
+							 		 </div>';
+							  	}else if(!$segment3[$i][$k+count][2] && !$segment3[$i][$k+ count][3]){
+							  		echo '<h3 class="target"></h3>';
+							  				
+							  	}else{
+							  		echo '<h4>' .  $segment3[$i][$k + count][0] . '</h4>';
+							  	}
+							  	echo '</div>';
+							}
+						$count +=4;
+					}?>
+				</div>
 			</div>
+		</div>
     </body>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
