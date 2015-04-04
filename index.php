@@ -120,7 +120,39 @@
 						</div>';
 					}
 				}
-				echo '</div>';
+				echo '</div><div class="row">
+								<div class="col-sm-12 title gray">
+									<h3> HIT POINTS </h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="tiny"> MAX HP </h3>
+									<h3 class="target-HP"></h3>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="tiny"> Bloodied </h3>
+									<h3 class="target-bloodied"></h3>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="tiny"> Surge Value </h3>
+									<h3 class="target-surge"></h3>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="tiny"> Surges/Day </h3>
+									<h3 class="target-surgeperday"></h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-5">
+									<h3 class="tiny">Current Hit Points</h3>
+									<h3 class="target-current"></h3>
+								</div>
+								<div class="col-sm-5">
+									<h3 class="tiny">Current Surge Uses</h3>
+									<h3 class="target-uses"></h3>
+								</div>
+							</div>';
 			}
 		}else if($i == 1){
 		 	for ($n = 0; $n<4; $n++){
