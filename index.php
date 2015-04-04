@@ -194,6 +194,8 @@
 							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
 							</div>';
 				}
+			
+			}
 				echo '<div class="row">
 		                        <div class="col-sm-8">
 		                            <label class="tiny"> Special Movement </label> 
@@ -203,7 +205,6 @@
 		                            <button class="btn btn-default space-fix"> Add </button> 
 					</div>
 		        	      </div>';
-			}
 		}
 		echo '</div>';
 	}?>
