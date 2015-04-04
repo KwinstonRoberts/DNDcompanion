@@ -185,7 +185,7 @@
 			echo '<div class="row">';
 			for($p=0;$p<6;$p++){
 				if($p != 1){
-					echo '<div class="col-sm-' . $segment6[$p][1] . '">
+					echo '<div class="col-sm-' . $segment6[$p][1] . ' gray">
 							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
 							<h3 class="target-' . $segment6[$p][0] . '"></h3>
 							</div>';
