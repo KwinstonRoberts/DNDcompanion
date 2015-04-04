@@ -146,11 +146,11 @@
 							<div class="row">
 								<div class="col-sm-5">
 									<h3 class="tiny">Current Hit Points</h3>
-									<h3 class="target-current"></h3>
+									<input type="number" class="form-control target-current">
 								</div>
 								<div class="col-sm-5">
 									<h3 class="tiny">Current Surge Uses</h3>
-									<h3 class="target-uses"></h3>
+									<input type="number" class="form-control target-uses">
 								</div>
 							</div>';
 			}
