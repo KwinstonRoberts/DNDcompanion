@@ -37,3 +37,7 @@
 .space-fix{
 	margin-top:22px;
 }
+
+.popover-title, .popover-content{
+	color:black;
+}
