@@ -9,7 +9,6 @@
     </head>
     <body>
 	<?php include("header.php"); ?>
-	
 	<div class="container gray_hl main">
             <div class="row">
                 <?php $segment1 = array(array("Character Name", "3",false),array("Level", "1",true)
@@ -58,12 +57,12 @@
                       </div>';            
         	if($i == 0){
         		echo '<div class="row">';
-        		$segment3 = array(array("Score", 3),array("Initiative", 3),array("DEX", 2),array("1/2Lvl", 2),array("Misc", 2));
+        		$segment3 = array(array("Score", 3,"Your Total Initiative Score"),array("Initiative", 3,"Initiative stats"),array("DEX", 2,"Dexterity is added to initiative here"),array("1/2Lvl", 2,"additional points equal to half your level"),array("Misc", 2,"Any other bonuses"));
            
 			for ($j = 0; $j<5; $j++){
 	        	        echo '<div class="col-sm-' . $segment3[$j][1] . ' gray">
-	        	                    <label class="tiny">' . $segment3[$j][0] . '</label>
-	        	                    <h3 id="target-' . $segment3[$j][0] .'"></h3>
+	        	                    <label class="tiny" data-toggle="popover" title="Initiative ' .  $segment3[$j][0] . '" data-trigger="hover" data-content="' . $segment3[$j][2] . '">' . $segment3[$j][0] . '</label>
+	        	                    <h3 id="target-' . $segment3[$j][0] . '"></h3>
 				      </div>';
 			} 
 			echo '</div>';
@@ -190,7 +189,7 @@
 							<h3 class="target-' . $segment6[$p][0] . '"></h3>
 							</div>';
 				}else{
-					echo '<div class="col-sm-' . $segment6[$p][1] . '">
+					echo '<div class="col-sm-' . $segment6[$p][1] . ' gray">
 							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
 							</div>';
 				}
@@ -214,4 +213,10 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+  		$('[data-toggle="popover"]').popover()
+	})
+   	    $('.tiny').popover(options);
+    </script>
 </html>
