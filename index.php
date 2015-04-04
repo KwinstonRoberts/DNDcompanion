@@ -180,6 +180,30 @@
 					</div>
 		        	      </div>';
 		    	}
+		}else{
+			$segment6 = array(array("Score",2,),array("Speed",5),array("Base",2),array("Armor",1),array("Item",1),array("Misc",1));
+			echo '<div class="row">';
+			for($p=0;$p<6;$p++){
+				if($p != 1){
+					echo '<div class="col-sm-' . $segment6[$p][1] . '">
+							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
+							<h3 class="target-' . $segment6[$p][0] . '"></h3>
+							</div>';
+				}else{
+					echo '<div class="col-sm-' . $segment6[$p][1] . '">
+							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
+							</div>';
+				}
+				echo '<div class="row">
+		                        <div class="col-sm-8">
+		                            <label class="tiny"> Special Movement </label> 
+						<input name="special-movement" class="form-control">
+					</div>
+					<div class="col-sm-4">
+		                            <button class="btn btn-default space-fix"> Add </button> 
+					</div>
+		        	      </div>';
+			}
 		}
 		echo '</div>';
 	}?>
