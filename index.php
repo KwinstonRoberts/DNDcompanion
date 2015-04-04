@@ -120,8 +120,9 @@
 						</div>';
 					}
 				}
+				echo '</div>';
 			}
-				echo '</div><div class="row">
+				echo '<div class="row">
 								<div class="col-sm-12 title gray">
 									<h3> HIT POINTS </h3>
 								</div>
