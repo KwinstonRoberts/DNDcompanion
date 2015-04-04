@@ -121,6 +121,7 @@
 					}
 				}
 			}
+		}
 				echo '</div><div class="row">
 								<div class="col-sm-12 title gray">
 									<h3> HIT POINTS </h3>
@@ -154,6 +155,7 @@
 									<input type="number" class="form-control target-uses">
 								</div>
 							</div>';
+						}
 		}else if($i == 1){
 		 	for ($n = 0; $n<4; $n++){
 		 		$segment5 = array(array(array("Score", 2),array("AC", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1)),
