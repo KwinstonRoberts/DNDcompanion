@@ -159,7 +159,7 @@
 		 		$segment5 = array(array(array("Score", 2),array("AC", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 					array(array("Score", 2),array("FORT", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 				 	array(array("Score", 2),array("REF", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
-				 	array(array("Score", 2),array("WILL", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1));
+				 	array(array("Score", 2),array("WILL", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)));
 				echo '<div class="row">';
 				for($o=0;$o<8;$o++){
 		                    echo '<div class="col-sm-' . $segment5[$n][$o][1] . ' gray">
