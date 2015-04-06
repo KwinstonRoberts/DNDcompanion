@@ -12,12 +12,15 @@ $(".form-control").focusout(function() {
 function pushStuff(g) {
     if (g.value !== "") {
         console.log(g.value);
-        $.post("../query.php",
+        $.post("query.php",
         [g.name, g.value],
-        function(data, status) {
-            for (var i = 0; i < data.length; i++) {
-                $(data[i][0]).val = data[i][1];
-            }
-        });
+        null);
+    }
+}
+
+function updateSheet(data) {
+    
+    for (var i = 0; i < data.length; i++) {
+        $(data[i][0]).val = data[i][1];
     }
 }
