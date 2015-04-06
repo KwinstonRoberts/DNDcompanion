@@ -225,10 +225,11 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script type="text/javascript">
     $(function () {
-  		$('[data-toggle="popover"]').popover()
-	})
-   	    $('.tiny').popover(options);
+  	$('[data-toggle="popover"]').popover()
+    });
+    $('.tiny').popover(options);
     </script>
 </html>
