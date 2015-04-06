@@ -6,7 +6,7 @@
             </div>
             <div class="col-sm-4 light">
                 <label for="playername">Player's Name</label> 
-                <input class="form-control" type="text" id="playername">
+                <input name="Player_Name" class="form-control" type="text" id="playername">
             </div>
         </div>
     </div>

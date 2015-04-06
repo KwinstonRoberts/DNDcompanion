@@ -11,7 +11,7 @@
 	<?php include("header.php"); ?>
 	<div class="container gray_hl main">
             <div class="row">
-                <?php $segment1 = array(array("Character Name", "3",false),array("Level", "1",true)
+                <?php $segment1 = array(array("Character_Name", "3",false),array("Level", "1",true)
                                 ,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
                                 ,array("Total XP", "2",true));
 		for($i=0; $i<count($segment1); $i++){

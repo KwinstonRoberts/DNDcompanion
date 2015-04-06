@@ -11,6 +11,7 @@ $(".form-control").focusout(function() {
 
 function pushStuff(g) {
     if (g.value !== "") {
+        console.log(g.name);
         console.log(g.value);
         $.post("query.php",
         [g.name, g.value],
