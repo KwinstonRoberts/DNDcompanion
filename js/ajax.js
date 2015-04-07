@@ -5,13 +5,14 @@
  */
 
 $(document).ready(function(){
-    $.ajax(
+    $.ajax({
         type: 'GET',
         url: 'players.php',
         success: function(response) {
             console.log(response);
-        });
+        }
     });
+});
 
  $('#players').click(saveData());
 
