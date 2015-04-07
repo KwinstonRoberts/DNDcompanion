@@ -8,8 +8,12 @@ $(document).ready(function(){
     $.ajax({
         type: 'POST',
         url: 'players.php',
+        data: {},
         success: function(response) {
             console.log(response);
+        },
+        error: function(error){
+            console.log(error);
         }
     });
 });
