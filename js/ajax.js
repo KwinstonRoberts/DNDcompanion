@@ -6,7 +6,7 @@
 
 $(document).ready(function(){
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: 'players.php',
         success: function(response) {
             console.log(response);
