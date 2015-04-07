@@ -14,8 +14,11 @@ function pushStuff(g) {
         console.log(g.name);
         console.log(g.value);
         $.post("query.php",
-        [g.name, g.value],
-        null);
+        { name: g.name, 
+          value: g.value},
+          function(data){
+          alert(data);
+          });
     }
 }
 
