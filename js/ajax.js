@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 
-$(document).ready(){
+$(document).ready(function(){
     $.ajax(
         type: 'GET',
         url: 'players.php',
         success: function(response) {
             console.log(response);
         });
-    }
+    });
 
  $('#players').click(saveData());
 
