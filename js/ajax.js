@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 });
 
- $('#players').click(saveData());
+// $('#players').click(saveData());
 
 
 /*function saveData(){
