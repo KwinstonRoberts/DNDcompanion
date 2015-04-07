@@ -28,4 +28,4 @@ if(!mysqli_query($conn, $queryPOST))
 }else{
     echo $name . "," . $value;
 }
-mysql_close($conn);
+mysqli_close($conn);
