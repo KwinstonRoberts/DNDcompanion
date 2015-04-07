@@ -27,12 +27,10 @@
 		</div>
             </div>
             <div class="col-sm-2">
-                <div class="btn-group">
                     <button type="button" class="btn btn-default"> Save </button>
                     <ul class="dropdown-menu" role="menu">
                     </ul>
 		</div>
-            </div>
         </div>
     </div>
 </header>
