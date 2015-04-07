@@ -21,5 +21,5 @@ $conn = new mysqli($server, $username, $password, $db);
     mysqli_query($conn, $queryPOST);
     mysqli_close($conn);
 
-    echo json_encode("hello");
+    echo json_encode($name,$value);
 ?>
