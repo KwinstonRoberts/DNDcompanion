@@ -2,17 +2,12 @@
  <?php
 $conn = parse_url($_ENV['CLEARDB_DATABASE_URL']);
 
-//database server
-define('DB_SERVER', $connection_info['host']);
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-//database name
-define('DB_DATABASE', substr($connection_info['path'], 1));
-
-//database login name
-define('DB_USER', $connection_info['user']);
-
-//database login password
-define('DB_PASS', $connection_info['pass']);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
