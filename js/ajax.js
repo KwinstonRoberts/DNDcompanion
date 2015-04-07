@@ -13,12 +13,14 @@ function pushStuff(g) {
     if (g.value !== "") {
         console.log(g.name);
         console.log(g.value);
-        $.post("query.php",
-        { name: g.name, 
-          value: g.value},
-          function(data){
-          alert(data);
-          });
+        $.ajax({  
+            type: 'POST',  
+            url: 'query.php', 
+            data: { name: g.name, value: g.value },
+            success: function(response) {
+            alert(response);
+            }
+        });
     }
 }
 
