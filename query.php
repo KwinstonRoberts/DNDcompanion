@@ -17,8 +17,7 @@ define('DB_PASS', $connection_info['pass']);
 $conn = mysqli_connect($server, $username, $password, $db);
 
     if(!$conn){
-        echo mysqli_error($conn);
-        die("Connection Failed");
+        die("Connection Failed" . echo mysqli_error($conn));
     }
 
     $name = $_POST['name'];
@@ -28,7 +27,6 @@ $conn = mysqli_connect($server, $username, $password, $db);
     
     if(mysqli_query($queryPOST))
     {
-        echo mysqli_error();
         die('Error: ' . mysqli_error($conn));
     }else{
         echo $name . "," . $value;
