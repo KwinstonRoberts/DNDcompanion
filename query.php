@@ -10,8 +10,7 @@ $db = substr($url["path"], 1);
 $conn = new mysqli($server, $username, $password, $db);
 
     if(!$conn){
-        die("Connection Failed" . mysqli_connect_error())
-        echo "Connection Failed" . mysqli_connect_error();
+        die("Connection Failed");
     }
 
     $name = $_POST[0];
