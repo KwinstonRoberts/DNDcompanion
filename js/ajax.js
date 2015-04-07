@@ -18,6 +18,7 @@ function pushStuff(n) {
             url: 'query.php', 
             data: { name: n.name , value: n.value },
             success: function(response) {
+                console.log(response);
             }
         });
     }

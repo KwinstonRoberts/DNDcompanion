@@ -17,6 +17,7 @@ define('DB_PASS', $connection_info['pass']);
 $conn = mysqli_connect($server, $username, $password, $db);
 
     if(!$conn){
+        echo mysqli_error($conn);
         die("Connection Failed");
     }
 
@@ -25,10 +26,10 @@ $conn = mysqli_connect($server, $username, $password, $db);
     
     $queryPOST = "INSERT INTO players('" . $name . "') VALUES('" . $value . "')";
     
-    if(mysqli_query($queryPOST));
+    if(mysqli_query($queryPOST))
     {
         echo mysqli_error();
-        die('Error: ' . mysqli_error($con));
+        die('Error: ' . mysqli_error($conn));
     }else{
         echo $name . "," . $value;
     }
