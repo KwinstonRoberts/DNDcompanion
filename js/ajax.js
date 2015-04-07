@@ -5,18 +5,18 @@
  */
 $(".form-control").focusout(function() {
     
-    pushStuff($(this).name(), $(this).value());
+    pushStuff(this);
     
 });
 
-function pushStuff(n,v) {
+function pushStuff(n) {
     if (v !== "") {
-        console.log(n);
-        console.log(v);
+        console.log(n.name);
+        console.log(n.value);
         $.ajax({  
             type: 'POST',  
             url: 'query.php', 
-            data: { name: n , value: v },
+            data: { name: n.name , value: n.value },
             success: function(response) {
             alert(response);
             }
