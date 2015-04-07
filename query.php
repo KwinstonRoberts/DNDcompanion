@@ -25,7 +25,7 @@ $conn = new mysqli($server, $username, $password, $db);
     
     $queryPOST = "INSERT INTO players('" . $name . "') VALUES('" . $value . "')";
     
-    mysqli_query($conn, $queryPOST);
+    mysqli_query($queryPOST);
     mysqli_close($conn);
 
     echo $name . "," . $value;
