@@ -23,7 +23,7 @@ $conn = new mysqli($server, $username, $password, $db);
     $name = $_POST['name'];
     $value = $_POST['value'];
     
-    $queryPOST = "INSERT INTO players('$name') VALUES('$value')";
+    $queryPOST = "INSERT INTO players('" . $name . "') VALUES('" . $value . "')";
     
     mysqli_query($conn, $queryPOST);
     mysqli_close($conn);
