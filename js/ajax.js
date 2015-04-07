@@ -12,7 +12,6 @@ $(document).ready(){
             console.log(response);
         });
     }
-}
 
  $('#players').click(saveData());
 
