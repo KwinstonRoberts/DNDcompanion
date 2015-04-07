@@ -13,13 +13,13 @@ $conn = new mysqli($server, $username, $password, $db);
         die("Connection Failed");
     }
 
-    $name = $_POST[0];
-    $value = $_POST[1];
+    $name = $_POST['name'];
+    $value = $_POST['value'];
     
     $queryPOST = "INSERT INTO players(" . $name . ") VALUES(" . $value . ")";
     
     mysqli_query($conn, $queryPOST);
     mysqli_close($conn);
 
-
+    echo json_encode("hello");
 ?>
