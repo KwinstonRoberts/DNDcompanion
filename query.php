@@ -11,7 +11,7 @@ $db = substr($url["path"], 1);
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
-    if (mysqli_connect_errno())
+    if(mysqli_connect_errno())
   {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
@@ -21,7 +21,7 @@ $conn = mysqli_connect($server, $username, $password, $db);
     
     $queryPOST = "INSERT INTO players('" . $name . "') VALUES('" . $value . "')";
     
-    if(mysqli_query($queryPOST))
+    if(!mysqli_query($queryPOST))
     {
         die('Error: ' . mysqli_error($conn));
     }else{
