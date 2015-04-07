@@ -8,6 +8,7 @@
     $name = $_POST[0];
     $value = $_POST[1];
     
-    $queryPOST = "INSERT INTO players VALUES(" . "LOOOOOL" . ");";
+    $queryPOST = "INSERT INTO players(" . $name . ") VALUES(" . $value . ")";
+    
     mysqli_query($conn, $queryPOST);
     mysqli_close($conn);
