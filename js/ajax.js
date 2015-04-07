@@ -3,7 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function saveData(n) {
+
+$(document).ready(){
+    $.ajax(
+        type: 'GET',
+        url: 'players.php',
+        success: function(response) {
+            console.log(response);
+        });
+    }
+}
+
+ $('#players').click(saveData());
+
+
+function saveData(){
     if (n.value !== "") {
         console.log(n.name);
         console.log(n.value);
