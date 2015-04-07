@@ -15,7 +15,7 @@
             <div class="col-sm-2">
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Players <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
+                    <ul id="players" class="dropdown-menu" role="menu">
                     </ul>
                 </div>
             </div>
