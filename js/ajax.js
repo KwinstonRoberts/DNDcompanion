@@ -3,13 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$(".form-control").focusout(function() {
-    
-    pushStuff(this);
-    
-});
-
-function pushStuff(n) {
+function saveData(n) {
     if (n.value !== "") {
         console.log(n.name);
         console.log(n.value);
@@ -21,12 +15,5 @@ function pushStuff(n) {
                 console.log(response);
             }
         });
-    }
-}
-
-function updateSheet(data) {
-    
-    for (var i = 0; i < data.length; i++) {
-        $(data[i][0]).val = data[i][1];
     }
 }
