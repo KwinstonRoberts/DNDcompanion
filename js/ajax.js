@@ -10,7 +10,7 @@ $(".form-control").focusout(function() {
 });
 
 function pushStuff(n) {
-    if (v !== "") {
+    if (n.value !== "") {
         console.log(n.name);
         console.log(n.value);
         $.ajax({  
