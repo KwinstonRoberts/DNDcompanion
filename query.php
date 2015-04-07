@@ -19,8 +19,17 @@ $conn = mysqli_connect($server, $username, $password, $db);
 
 $name = $_POST['name'];
 $value = $_POST['value'];
-    
-$queryPOST = "INSERT INTO players($name) VALUES('$value')";
+
+$queryPOST = "INSERT INTO players(";
+for ($i = 1; $i <= $name.length; $i++) {
+    if ($i == $name.length) {
+        $queryPOST += $name . ") VALUE(";
+    } else {
+        $queryPOST += $name . ", ";
+    }
+}
+
+#$queryPOST = "INSERT INTO players($name) VALUES('$value')";
 
 if(!mysqli_query($conn, $queryPOST))
 {
