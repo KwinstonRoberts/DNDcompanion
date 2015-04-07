@@ -12,8 +12,8 @@ $(document).ready(function(){
         success: function(response) {
             console.log(response);
         },
-        error: function(error){
-            console.log(error);
+        error: function(status,error){
+            console.log(status ,error);
         }
     });
 });

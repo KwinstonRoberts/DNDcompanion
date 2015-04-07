@@ -26,3 +26,4 @@ $queryPOST = "SELECT Player_Name FROM players";
     echo $result;
 }
 mysqli_close($conn);
+?>
