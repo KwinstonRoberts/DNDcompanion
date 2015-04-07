@@ -16,9 +16,10 @@ define('DB_PASS', $connection_info['pass']);
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
-    if(!$conn){
-        die("Connection Failed" . mysqli_error($conn));
-    }
+    if (mysqli_connect_errno())
+  {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
     $name = $_POST['name'];
     $value = $_POST['value'];
