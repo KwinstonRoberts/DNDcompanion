@@ -21,38 +21,17 @@
             </div>
             <div class="col-sm-2">
                 <div class="btn-group">
-		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Items <span class="caret"></span></button>
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Characters <span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu">
                     </ul>
 		</div>
             </div>
             <div class="col-sm-2">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Locations <span class="caret"></span></button>
+                    <button type="button" class="btn btn-default"> Save </button>
                     <ul class="dropdown-menu" role="menu">
                     </ul>
 		</div>
-            </div>
-            <div class="col-sm-2">
-		<div class="btn-group">
-		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Monsters <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
-                    </ul>
-		</div>
-            </div>	
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Archive <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Modules <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
