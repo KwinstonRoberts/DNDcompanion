@@ -17,7 +17,7 @@ $(document).ready(function(){
  $('#players').click(saveData());
 
 
-function saveData(){
+/*function saveData(){
     if (n.value !== "") {
         console.log(n.name);
         console.log(n.value);
@@ -30,4 +30,4 @@ function saveData(){
             }
         });
     }
-}
+}*/
