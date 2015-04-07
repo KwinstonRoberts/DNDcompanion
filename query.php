@@ -1,13 +1,12 @@
+<?php
+#$conn = parse_url($_ENV['CLEARDB_DATABASE_URL']);
 
- <?php
-$conn = parse_url($_ENV['CLEARDB_DATABASE_URL']);
+#$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
+$server = "us-cdbr-iron-east-02.cleardb.net";
+$username = "be321624304dab";
+$password = "0d023e8d";
+$db = "heroku_e5f1f5a101fb1b4";
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
@@ -15,19 +14,18 @@ $conn = mysqli_connect($server, $username, $password, $db);
   {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
+  
+//$dbase = mysql_select_db($db);
 
-    $name = $_POST['name'];
-    $value = $_POST['value'];
+$name = $_POST['name'];
+$value = $_POST['value'];
     
-    $queryPOST = "INSERT INTO players('" . $name . "') VALUES('" . $value . "')";
-    
-    if(!mysqli_query($queryPOST))
-    {
-        die('Error: ' . mysqli_error($conn));
-    }else{
-        echo $name . "," . $value;
-    }
-    mysqli_close($conn);
+$queryPOST = "INSERT INTO players($name) VALUES('$value')";
 
-    
-?>
+if(!mysqli_query($conn, $queryPOST))
+{
+    die('Error: ' . mysqli_error($conn));
+}else{
+    echo $name . "," . $value;
+}
+mysql_close($conn);
