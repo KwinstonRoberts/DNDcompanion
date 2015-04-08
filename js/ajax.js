@@ -19,7 +19,8 @@ $(document).ready(function(){
     });
 });
 
-$('a').click(function(){
+$('a').click(function(e){
+    e.preventDefault();
     $.ajax({
         type: 'POST',
         url: 'query.php',
