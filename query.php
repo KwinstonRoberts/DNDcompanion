@@ -36,12 +36,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
    
     #$queryPOST = "INSERT INTO players($name) VALUES('$value')";
 
-    if(!mysqli_query($conn, $queryPOST))
-    {
-        die('Error: ' . mysqli_error($conn));
-    }else{
-        echo $name . "," . $value;
-    }
 }
 mysqli_close($conn);
 ?>
