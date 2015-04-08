@@ -8,7 +8,6 @@ $(document).ready(function(){
     $.ajax({
         type: 'GET',
         url: 'query.php',
-        data:{state: 1},
         success: function(response) {
             console.log(response);
         },
