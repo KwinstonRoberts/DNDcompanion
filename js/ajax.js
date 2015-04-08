@@ -9,7 +9,10 @@ $(document).ready(function(){
         type: 'GET',
         url: 'query.php',
         success: function(response) {
-            console.log(response);
+            var names = split(response, ",");
+            for (var i=0; i<names.length(); i++){
+                $('#players').innerHTML = names[i];
+            }
         }
     });
 });
