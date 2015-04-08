@@ -20,8 +20,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     while($row = mysqli_fetch_row($conn->query($queryPOST))){
         echo $row[0];
-    }else{
-        die(mysqli_error());
     }
 }
 
