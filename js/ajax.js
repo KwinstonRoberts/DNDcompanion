@@ -24,6 +24,7 @@ $('a').click(function(event){
     $.ajax({
         type: 'POST',
         url: 'query.php',
+        data:{name: $(this).text()},
         success: function(response){
             console.log(response);
         }
