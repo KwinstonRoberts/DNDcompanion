@@ -88,3 +88,5 @@ var cDestiny;   // Epic Destiny
     var curHP;
     var curSurges;
 }
+
+var cFeats;     // This will be an array of the feats, we'll talk about it.
