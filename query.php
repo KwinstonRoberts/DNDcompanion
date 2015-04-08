@@ -19,7 +19,7 @@ $conn = mysqli_connect($server, $username, $password, $db);
 
 $name = $_POST['name'];
 $value = $_POST['value'];
-if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     $queryPOST = "SELECT Player_Name FROM players";
 
