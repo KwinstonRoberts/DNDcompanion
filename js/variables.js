@@ -1,7 +1,5 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This file will hold all the variables to be used in the sheet.
  */
 
 var cClass;     // Character Class
