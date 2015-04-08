@@ -29,20 +29,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     }else{
         $result = mysqli_query($conn, $queryPOST);
         echo $result;
-        }
     }
 }else{
 
 
-    $queryPOST = "INSERT INTO players(";
-    for ($i = 1; $i <= $name.length; $i++) {
-        if ($i == $name.length) {
-            $queryPOST += $name . ") VALUE(";
-        } else {
-            $queryPOST += $name . ", ";
-        }
-    }
-
+   
     #$queryPOST = "INSERT INTO players($name) VALUES('$value')";
 
     if(!mysqli_query($conn, $queryPOST))
@@ -53,3 +44,4 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     }
 }
 mysqli_close($conn);
+?>
