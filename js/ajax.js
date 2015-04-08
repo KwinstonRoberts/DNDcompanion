@@ -11,7 +11,7 @@ $(document).ready(function(){
         success: function(response) {
             var names = response.split(",");
             for (var i=0; i<names.length; i++){
-                $('#players').innerHTML = '<p>' + names[i] + '</p>';
+                $('#players').innerHTML = '<li>' + names[i] + '</li>';
             }
         }
     });
