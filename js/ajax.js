@@ -12,7 +12,8 @@ $(document).ready(function(){
             var names = response.split(",");
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
-                $('#players').hmtl($('#players').html()+ '<li>' + names[i] + '</li>');
+                var html = $('#players').html();
+                $('#players').html(html + '<li>' + names[i] + '</li>');
             }
         }
     });
