@@ -10,9 +10,6 @@ $(document).ready(function(){
         url: 'query.php',
         success: function(response) {
             alert(response);
-        },
-        error: function(error){
-            console.log(error);
         }
     });
 });
