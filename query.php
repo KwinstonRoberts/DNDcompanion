@@ -32,24 +32,25 @@ if($state != null){
             echo $result;
         }
     }
-}
-
-
-$queryPOST = "INSERT INTO players(";
-for ($i = 1; $i <= $name.length; $i++) {
-    if ($i == $name.length) {
-        $queryPOST += $name . ") VALUE(";
-    } else {
-        $queryPOST += $name . ", ";
-    }
-}
-
-#$queryPOST = "INSERT INTO players($name) VALUES('$value')";
-
-if(!mysqli_query($conn, $queryPOST))
-{
-    die('Error: ' . mysqli_error($conn));
 }else{
-    echo $name . "," . $value;
+
+
+    $queryPOST = "INSERT INTO players(";
+    for ($i = 1; $i <= $name.length; $i++) {
+        if ($i == $name.length) {
+            $queryPOST += $name . ") VALUE(";
+        } else {
+            $queryPOST += $name . ", ";
+        }
+    }
+
+    #$queryPOST = "INSERT INTO players($name) VALUES('$value')";
+
+    if(!mysqli_query($conn, $queryPOST))
+    {
+        die('Error: ' . mysqli_error($conn));
+    }else{
+        echo $name . "," . $value;
+    }
 }
 mysqli_close($conn);
