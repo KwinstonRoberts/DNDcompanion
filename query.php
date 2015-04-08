@@ -22,6 +22,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 	    while($row = mysqli_fetch_row($result)){
 	        $response = $response . $row[0];  
 	    }
+	    echo $response;
 	    mysqli_free_result($result);
     }
 }

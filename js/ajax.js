@@ -9,7 +9,7 @@ $(document).ready(function(){
         type: 'GET',
         url: 'query.php',
         success: function(response) {
-            alert(response);
+            console.log(response);
         }
     });
 });
