@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 });
 
-$('a')..mousedown(function(event){
+$('a').mousedown(function(event){
     event.preventDefault();
     console.log("!!!")
     $.ajax({
