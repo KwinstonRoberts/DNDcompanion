@@ -9,7 +9,7 @@ $(document).ready(function(){
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
                 var html = $('#players').html();
-                $('#players').html(html + '<li><a>' + names[i] + '</a></li>');
+                $('#players').html(html + '<li><a role="menuitem" tabindex="-1">' + names[i] + '</a></li>');
             }
         }
     });
