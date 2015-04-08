@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $.ajax({
         type: 'GET',
-        url: 'player.php',
+        url: 'query.php',
         data:{state: 1}
         success: function(response) {
             console.log(response);
