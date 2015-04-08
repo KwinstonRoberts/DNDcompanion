@@ -20,6 +20,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $response = "";
     while($row = mysqli_fetch_row($conn->query($queryPOST))){
         $response += $row[0];
+        echo $response;
     }
 }
 
