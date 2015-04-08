@@ -13,8 +13,18 @@ $(document).ready(function(){
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
                 var html = $('#players').html();
-                $('#players').html(html + '<li><a href="#">' + names[i] + '</a></li>');
+                $('#players').html(html + '<li><a class="choose" href="#">' + names[i] + '</a></li>');
             }
+        }
+    });
+});
+
+$('.choose').click(function(){
+    $.ajax({
+        type: 'POST',
+        url: 'query.php',
+        success: function(response){
+            console.log(response);
         }
     });
 });

@@ -25,6 +25,19 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 	    echo $response;
 	    mysqli_free_result($result);
     }
+}else{
+
+	$queryPOST = 'SELECT * FROM players';
+	$response = "";
+    if($result = mysqli_query($conn, $queryPOST)){
+	    while($row = mysqli_fetch_row($result)){
+	    	for($i=0; $i<16; $i++){
+	    	    $response = $response . "," .  $row[$i];  
+	   	    }
+	   	    echo $response;
+	   	    mysqli_free_result($response);
+		}
+	}
 }
 
 mysqli_close($conn);
