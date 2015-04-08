@@ -25,7 +25,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 	    echo $response;
 	    mysqli_free_result($result);
     }
-}else{
+}else if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 
 	$queryPOST = 'SELECT * FROM players';
 	$response = "";
