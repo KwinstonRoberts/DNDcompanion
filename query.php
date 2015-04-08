@@ -19,17 +19,17 @@ $conn = mysqli_connect($server, $username, $password, $db);
 
 $name = $_POST['name'];
 $value = $_POST['value'];
-$state = $_GET['state'];
-if($state != null){
-    if($state == 1){
-        $queryPOST = "SELECT Player_Name FROM players";
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+    $state = $_GET['state'];
+
+    $queryPOST = "SELECT Player_Name FROM players";
 
 
-        if(!mysqli_query($conn, $queryPOST)){
-            die('Error: ' . mysqli_error($conn));
-        }else{
-            $result = mysqli_query($conn, $queryPOST);
-            echo $result;
+    if(!mysqli_query($conn, $queryPOST)){
+        die('Error: ' . mysqli_error($conn));
+    }else{
+        $result = mysqli_query($conn, $queryPOST);
+        echo $result;
         }
     }
 }else{
