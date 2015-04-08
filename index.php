@@ -228,9 +228,9 @@
     <script src="js/ajax.js"></script>
     <script type="text/javascript">
     $(function () {
-  	$('[data-toggle="popover"]').popover()
+  	$('[data-toggle="popover"]').popover();
     });
-    $('.dropdown-toggle').dropdown()
+    $('.dropdown-toggle').dropdown();
     $('.tiny').popover();
     </script>
 </html>
