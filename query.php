@@ -16,10 +16,10 @@ if(!$conn){
 
 if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
-    $queryPOST = "SELECT Player_Name FROM players";
-
+    $queryPOST = "SELECT * FROM players";
+    $response = "";
     while($row = mysqli_fetch_row($conn->query($queryPOST))){
-        echo $row[0];
+        $response += $row[0];
     }
 }
 
