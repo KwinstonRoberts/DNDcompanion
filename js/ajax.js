@@ -10,7 +10,7 @@ $(document).ready(function(){
         url: 'query.php',
         success: function(response) {
             var names = response.split(",");
-            for (var i=0; i<names.length(); i++){
+            for (var i=0; i<names.length; i++){
                 $('#players').innerHTML = names[i];
             }
         }
