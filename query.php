@@ -7,20 +7,19 @@ $db = "heroku_e5f1f5a101fb1b4";
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
-    if(mysqli_connect_errno())
-  {
+if(!$conn){
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     die("Failed to connect:" . mysqli_connect_error());
-  }
+}
 
 if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     $queryPOST = "SELECT Player_Name FROM players";
 
-    if(!$result = mysqli_query($conn, $queryPOST)){
-        die(mysqli_error());
+    if(mysqli_query($conn, $queryPOST)){
+        echo mysqli_query($conn, $queryPOST);
     }else{
-        echo $result;
+        die(mysqli_error());
     }
 }
 
