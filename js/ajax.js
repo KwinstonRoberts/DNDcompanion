@@ -13,7 +13,7 @@ $(document).ready(function(){
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
                 var html = $('#players').html();
-                $('#players').html(html + '<li>' + names[i] + '</li>');
+                $('#players').html(html + '<li><a href="#">' + names[i] + '</a></li>');
             }
         }
     });
