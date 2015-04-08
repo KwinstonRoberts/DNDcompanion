@@ -12,7 +12,7 @@ $(document).ready(function(){
             var names = response.split(",");
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
-                $('#players').innerHTML = '<li>' + names[i] + '</li>';
+                $('#players').innerHTML += '<li>' + names[i] + '</li>';
             }
         }
     });
