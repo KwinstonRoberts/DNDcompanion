@@ -20,8 +20,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $response = "";
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
-	        $response += $row[0];
+	        $response += $row[1];
 	        echo $response;
+
+	        mysqli_free_result($result);
 	    }
     }
 }
