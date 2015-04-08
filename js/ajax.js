@@ -9,6 +9,7 @@ $(document).ready(function(){
         type: 'GET',
         url: 'query.php',
         success: function(response) {
+            console.log(response);
             var names = response.split(",");
             for (var i=0; i<names.length; i++){
                 $('#players').innerHTML = '<li>' + names[i] + '</li>';
