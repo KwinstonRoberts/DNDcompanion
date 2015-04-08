@@ -18,9 +18,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     $queryPOST = "SELECT * FROM players";
     $response = "";
-    while($row = mysqli_fetch_row($conn->query($queryPOST))){
-        $response += $row[0];
-        echo $response;
+    if($result = mysqli_query($conn, $queryPOST)){
+	    while($row = mysqli_fetch_row($result)){
+	        $response += $row[0];
+	        echo $response;
+	    }
     }
 }
 
