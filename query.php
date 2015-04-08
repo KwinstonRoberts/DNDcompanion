@@ -26,8 +26,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 	    mysqli_free_result($result);
     }
 }else if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
-
-	$queryPOST = 'SELECT * FROM players';
+	$name = $_GET['name'];
+	$queryPOST = 'SELECT * FROM players WHERE Player_Name = "$name"';
 	$response = "";
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
