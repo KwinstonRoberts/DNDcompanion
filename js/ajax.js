@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 $('a').click(function(event){
     event.preventDefault();
-    console.log("!!!");
+    console.log("!!!"); 
     $.ajax({
         type: 'POST',
         url: 'query.php',
