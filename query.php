@@ -23,11 +23,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $queryPOST = "SELECT Player_Name FROM players";
 
 
-    if(!mysqli_query($conn, $queryPOST)){
-        die('Error: ' . mysqli_error($conn));
-    }else{
-        $result = mysqli_query($conn, $queryPOST);
-        echo $result;
+    $result = mysqli_query($conn, $queryPOST);
+    echo $result;
     }
 
 mysqli_close($conn);
