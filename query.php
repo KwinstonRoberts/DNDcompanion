@@ -1,7 +1,4 @@
 <?php
-#$conn = parse_url($_ENV['CLEARDB_DATABASE_URL']);
-
-#$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = "us-cdbr-iron-east-02.cleardb.net";
 $username = "be321624304dab";
@@ -13,19 +10,20 @@ $conn = mysqli_connect($server, $username, $password, $db);
     if(mysqli_connect_errno())
   {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    die("Failed to connect:" . mysqli_connect_error());
   }
-  
-//$dbase = mysql_select_db($db);
-
 
 if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     $queryPOST = "SELECT Player_Name FROM players";
 
-
-    $result = mysqli_query($conn, $queryPOST);
-    echo $result;
+    if(!$result = mysqli_query($conn, $queryPOST));
+        die(mysqli_error());
+    }else{
+        echo $result;
     }
+}
 
 mysqli_close($conn);
+
 ?>
