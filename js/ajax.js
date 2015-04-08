@@ -6,14 +6,13 @@
 
 $(document).ready(function(){
     $.ajax({
-        type: 'POST',
-        url: 'players.php',
-        data: {},
+        type: 'GET',
+        url: 'player.php',
         success: function(response) {
             console.log(response);
         },
-        error: function(status,error){
-            console.log(status ,error);
+        error: function(error){
+            console.log(error);
         }
     });
 });

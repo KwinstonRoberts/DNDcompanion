@@ -9,8 +9,7 @@
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
-    if(mysqli_connect_errno())
-  {
+    if(mysqli_connect_errno()){
     die("Error:" . mysqli_connect_error());
   }
 
