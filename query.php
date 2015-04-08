@@ -17,8 +17,7 @@ $conn = mysqli_connect($server, $username, $password, $db);
   
 //$dbase = mysql_select_db($db);
 
-$name = $_POST['name'];
-$value = $_POST['value'];
+
 if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
     $queryPOST = "SELECT Player_Name FROM players";
@@ -30,12 +29,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $result = mysqli_query($conn, $queryPOST);
         echo $result;
     }
-}else{
 
-
-   
-    #$queryPOST = "INSERT INTO players($name) VALUES('$value')";
-
-}
 mysqli_close($conn);
 ?>
