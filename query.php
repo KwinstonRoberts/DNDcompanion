@@ -40,7 +40,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     	   	    mysqli_free_result($response);
             }
 		}
-	}else{
+	}else if($_POST['header']==0){
         $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
         $response = "";
         if($result = mysqli_query($conn, $queryPOST)){
@@ -49,6 +49,21 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                 echo $response;
                 mysqli_free_result($response);
             }
+        }else{
+        	$queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
+        	if($result = mysqli_query($conn, $queryPOST)){
+        		 while($row = mysqli_fetch_row($result)){
+        		 	for ($i=0; $i<length($row); $i++){
+        		 		if($row[i]==null){
+        		 			$index = mysql_query($conn, "SHOW INDEX FROM players");
+        		 			echo $index;
+        		 			//mysqli_query($conn,"INSERT INTO players")
+        		 		}
+        		 	}
+        		}
+        	}else{
+
+        	}
         }
     }
 }
