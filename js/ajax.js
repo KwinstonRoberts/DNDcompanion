@@ -15,8 +15,7 @@ $(document).ready(function(){
     });
 });
 
-$('li').click(function(event){
-    event.preventDefault();
+$("li").click(function(event){
     console.log("!!!");
     $.ajax({
         type: 'POST',
