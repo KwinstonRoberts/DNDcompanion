@@ -65,8 +65,6 @@ $(document).ready(function(){
         });
     });
        $("#btn-save").click(function(){
-        var name = this.text;
-        console.log(name);
         $.ajax({
             type: 'POST',
             url: 'query.php',

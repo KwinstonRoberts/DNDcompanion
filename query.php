@@ -63,10 +63,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
        		 			mysqli_query($conn,"INSERT INTO players($columns[i]) VAlUES('$row[i]'')");
         	 		}else{
        		 			mysqli_query($conn,"UPDATE players set $columns[i]='$row[i]'");
+
         		 	}
         		}
+        		echo "inserted data";
         	}
-        	echo "inserted data";
         }
     }
 }
