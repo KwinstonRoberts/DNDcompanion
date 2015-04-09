@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
 
 
-    $(".dropdown-menu").on('click', 'li a', function(){
+    $(".dropdown-menu").on('click', 'li .player a', function(){
         var name = this.text;
         console.log(name);
         $.ajax({
@@ -32,6 +32,7 @@ $(document).ready(function(){
                     console.log(names[i]);
                     var html = $('#characters').html();
                     $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
+                    $('#btn-player').html(name)
                     $("#playername").val(name);
                 }
             }
