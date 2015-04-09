@@ -70,6 +70,5 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         echo $response;
         mysqli_free_result($response);
     }
-}
 mysqli_close($conn);
 ?>
