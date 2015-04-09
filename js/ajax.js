@@ -9,7 +9,7 @@ $(document).ready(function(){
             for (var i=0; i<names.length; i++){
                 console.log(names[i]);
                 var html = $('#players').html();
-                $('#players').html(html + '<li><a >' + names[i] + '</a></li>');
+                $('#players').html(html + '<li><a>' + names[i] + '</a></li>');
             }
         }
     });
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 $('a').mousedown(function(event){
     event.preventDefault();
-    console.log("!!!")
+    console.log("!!!");
     $.ajax({
         type: 'POST',
         url: 'query.php',
