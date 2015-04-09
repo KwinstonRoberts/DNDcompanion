@@ -2,7 +2,15 @@
  * This file will hold all the variables to be used in the sheet.
  */
 
-var cClass;     // Character Class
+var Class = {
+    'name': "",
+    'scores': "",
+    'AC': 0,
+    'FORT': 0,
+    'REF': 0,
+    'WILL': 0
+};
+
 var cRace;      // Character Race
 var cEXP;       // Character experience
 
