@@ -20,7 +20,7 @@ $(document).ready(function(){
         $.ajax({
             type: 'POST',
             url: 'query.php',
-            data:{name: $(this).text},
+            data:{name: this.text},
             success: function(response){
                 console.log(response);
             }
