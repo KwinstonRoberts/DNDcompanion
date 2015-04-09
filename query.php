@@ -19,11 +19,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
 	        $response = $response . "," .  $row[0];  
-	    }else{
-            die(mysqli_error($conn))
-        }
+	    }
 	    echo $response;
 	    mysqli_free_result($result);
+    }else{
+        die(mysqli_error($conn));
     }
 }else if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$name = $_POST['name'];
