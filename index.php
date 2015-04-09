@@ -232,4 +232,4 @@
     });
     $('.tiny').popover();
     </script>
-</htm l>
+</html>
