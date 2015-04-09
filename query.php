@@ -51,7 +51,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     }else{
         $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
        	    $result = mysqli_query($conn, $queryPOST);
-        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')") or die(mysqli_error());
+        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')") or die(mysqli_error($conn));
         	}
        	while($row = mysqli_fetch_row($result)){
        		$response = "";
