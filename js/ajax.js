@@ -65,6 +65,7 @@ $(document).ready(function(){
         });
     });
        $("#btn-save").click(function(){
+        var name = $('#playername').html();
         $.ajax({
             type: 'POST',
             url: 'query.php',
