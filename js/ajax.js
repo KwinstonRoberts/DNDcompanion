@@ -54,9 +54,9 @@ $(document).ready(function(){
                 var info = response.split(",");
                 $('#btn-character').html(name);
                 $('input').prop('disabled',false);
-                var fields = ['Level','Class','Paragon Path','Epic Destiny',
+                var fields = ['Level','Class','Paragon_Path','Epic_Destiny',
                             'Total XP','Race','Size','Age','Gender','Height',
-                            'Weight','Alignment','Diety','Adventuring Company']; 
+                            'Weight','Alignment','Diety','Adventuring_Company']; 
 
                 for(var i=0; i<info.length; i++){
                     $("[name ='" + fields[i] + "']").val(info[i]);
