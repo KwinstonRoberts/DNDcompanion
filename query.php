@@ -27,15 +27,30 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     }
 }else if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$name = $_POST['name'];
-	$queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
-	$response = "";
-    if($result = mysqli_query($conn, $queryPOST)){
-	    while($row = mysqli_fetch_row($result)){
-	    	    $response = $response . $row[1] . ",";  
-	   	    echo $response;
-	   	    mysqli_free_result($response);
+    if($_POST['header']==1){
+    	$queryPOST = 'SELECT * FROM players WHERE Character_Name ="' . $name . '"';
+    	$response = "";
+        if($result = mysqli_query($conn, $queryPOST)){
+    	    while($row = mysqli_fetch_row($result)){
+    	    	    $response = $response . $row[1] . "," . $row[2] . "," . $row[3] 
+                    . "," . $row[4] . "," . $row[5] . "," . $row[6] . "," . $row[7]. "," . $row[7]
+                    . "," . $row[8] . "," . $row[9] . "," . $row[10] . "," . $row[11] . "," . $row[12]
+                    . "," . $row[13] . "," . $row[14] . "," . $row[15] . "," . $row[16];  
+    	   	    echo $response;
+    	   	    mysqli_free_result($response);
+            }
 		}
-	}
+	}else{
+        $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
+        $response = "";
+        if($result = mysqli_query($conn, $queryPOST)){
+            while($row = mysqli_fetch_row($result)){
+                    $response = $response . $row[1] . ",";  
+                echo $response;
+                mysqli_free_result($response);
+            }
+        }
+    }
 }
 
 mysqli_close($conn);
