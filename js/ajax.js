@@ -28,7 +28,7 @@ $(document).ready(function(){
                 for (var i=0; i<names.length; i++){
                     console.log(names[i]);
                     var html = $('#characters').html();
-                    $('#players').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
+                    $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
                 }
             }
         });
