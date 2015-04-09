@@ -43,7 +43,7 @@ $(document).ready(function(){
       $(".dropdown-menu").on('click', '.character a', function(){
         var name = this.text;
         console.log(name);
-        $('input [name="Character_Name"]').val(name);
+        $('[name="Character_Name"]').val(name);
         $.ajax({
             type: 'POST',
             url: 'query.php',
@@ -52,7 +52,7 @@ $(document).ready(function(){
             success: function(response){
                 console.log(response);
                 var names = response.split(",");
-                $('#btn-player').html(name);
+                $('#btn-character').html(name);
             }
         });
     });
