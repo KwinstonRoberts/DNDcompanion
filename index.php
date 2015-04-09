@@ -11,9 +11,9 @@
 	<?php include("header.php"); ?>
 	<div class="container gray_hl main">
             <div class="row">
-                <?php $segment1 = array(array("Character_Name", "3",false),array("Level", "1",true)
-                                ,array("Class", "2",false),array("Paragon Path", "2",false),array("Epic Destiny", "2",false)
-                                ,array("Total XP", "2",true));
+                <?php $segment1 = array(array("Character_Name", "3",false),array("Character_Level", "1",true)
+                                ,array("Class", "2",false),array("Paragon_Path", "2",false),array("Epic_Destiny", "2",false)
+                                ,array("Total Exp", "2",true));
 		for($i=0; $i<count($segment1); $i++){
                     if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment1[$i][1] . '">
@@ -28,7 +28,7 @@
             <div class="row">
 		<?php $segment2 = array(array("Race", "3",false),array("Size", "1",false)
 		,array("Age", "1",true),array("Gender", "1",true),array("Height", "1",true)
-		,array("Weight", "1",true), array("Alignment", '1',false),array("Diety", '1',false),array("Adventuring Company", '2',false));
+		,array("Weight", "1",true), array("Alignment", '1',false),array("Diety", '1',false),array("Adventuring_Company", '2',false));
 		for($i=0; $i<count($segment2); $i++){
                     if($segment2[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment2[$i][1] . '">
