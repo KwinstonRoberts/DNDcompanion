@@ -65,7 +65,7 @@ $(document).ready(function(){
         });
     });
        $("#btn-save").click(function(){
-        var name = $('#playername')val();
+        var name = $('#playername').val();
         $.ajax({
             type: 'POST',
             url: 'query.php',
