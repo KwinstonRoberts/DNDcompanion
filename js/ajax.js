@@ -51,8 +51,16 @@ $(document).ready(function(){
                     header: 1},
             success: function(response){
                 console.log(response);
-                var names = response.split(",");
+                var info = response.split(",");
                 $('#btn-character').html(name);
+
+                var fields = ['Level','Class','Paragon Path','Epic Destiny',
+                            'Total XP','Race','Size','Age','Gender','Height',
+                            'Weight','Alignment','Diety','Adventuring Company']; 
+
+                for(var i=0; i<info.length; i++){
+
+                }
             }
         });
     });
