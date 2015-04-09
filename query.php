@@ -26,14 +26,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 	    mysqli_free_result($result);
     }
 }else if ( $_SERVER['REQUEST_METHOD'] == 'POST' ){
-	$name = $_GET['name'];
-	$queryPOST = 'SELECT * FROM players WHERE Player_Name = "$name"';
+	$name = $_POST['name'];
+	$queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
 	$response = "";
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
-	    	for($i=0; $i<16; $i++){
-	    	    $response = $response . "," .  $row[$i];  
-	   	    }
+	    	    $response = $response . "," .  $row[1];  
 	   	    echo $response;
 	   	    mysqli_free_result($response);
 		}
