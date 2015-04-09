@@ -69,8 +69,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         	           	$response = $response . $row[i];
 
         	}
-        	echo $response;
         }
+        echo $response;
     }
 }
 
