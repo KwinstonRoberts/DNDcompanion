@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-    $('input #playername').prop('disabled',false);
+    $('#playername').prop('disabled',false);
     $('input').prop('disabled',true);
     $.ajax({
         type: 'GET',
