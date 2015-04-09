@@ -57,7 +57,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
        	}
        	while($row = mysqli_fetch_row($result)){
          	for ($i=0; $i<count($row); $i++){
-       	 		$columns = array('Character_Level','Class','Paragon_Path','Epic_Destiny',
+       	 		$columns = array('Player_Name','Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
          		if($row[i]==null){
