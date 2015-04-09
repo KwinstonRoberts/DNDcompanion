@@ -66,11 +66,12 @@ $(document).ready(function(){
     });
        $("#btn-save").click(function(){
         var name = $('#playername').val();
+        console.log(name);
         $.ajax({
             type: 'POST',
             url: 'query.php',
             data:{name: name,
-                    header: 2},
+                header: 2},
             success: function(response){
                 console.log(response);
             }
