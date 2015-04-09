@@ -56,7 +56,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         	mysqli_query($conn,"INSERT INTO players(PLayer_Name) VAlUES('$row[i]')");
        	}
        	while($row = mysqli_fetch_row($result)){
-         	for ($i=0; $i<length($row); $i++){
+         	for ($i=0; $i<count($row); $i++){
        	 		$columns = array('Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
