@@ -64,6 +64,19 @@ $(document).ready(function(){
             }
         });
     });
+       $(".btn-save").click(function(){
+        var name = this.text;
+        console.log(name);
+        $.ajax({
+            type: 'POST',
+            url: 'query.php',
+            data:{name: name,
+                    header: 2},
+            success: function(response){
+                console.log(response);
+            }
+        });
+    });
 });
 // $('#players').click(saveData());
 
