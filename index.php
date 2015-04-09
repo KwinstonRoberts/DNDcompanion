@@ -230,7 +230,6 @@
     $(function () {
   	$('[data-toggle="popover"]').popover();
     });
-    $('.dropdown-toggle').dropdown();
     $('.tiny').popover();
     </script>
-</html>
+</htm l>
