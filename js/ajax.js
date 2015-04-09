@@ -32,7 +32,7 @@ $(document).ready(function(){
                     console.log(names[i]);
                     var html = $('#characters').html();
                     $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
-                    $("#playername").value(name);
+                    $("#playername").val(name);
                 }
             }
         });
