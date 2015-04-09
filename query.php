@@ -53,7 +53,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     }else{
         $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
        	if(!$result = mysqli_query($conn, $queryPOST)){
-        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$row[0]')");
+        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('" . $row[0] . "')");
        	}
        	while($row = mysqli_fetch_row($result)){
        		$response = "";
@@ -62,12 +62,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
          		if($row[i]==null){
-       	 			mysqli_query($conn,"INSERT INTO players($columns[i]) VAlUES('$row[i]')");
+       	 			mysqli_query($conn,"INSERT INTO players(" . $columns[i] . ") VAlUES('" . $row[i] . "')");
        	 		}else{
-    	 			mysqli_query($conn,"UPDATE players set $columns[i]='$row[i]'");
+    	 			mysqli_query($conn,"UPDATE players set" . $columns[i] . "='" . $row[i] . "'");
         	    }
-        	           	$response = $response . $row[i];
-
+        	    $response = $response . $row[i];
         	}
         }
         echo $response;
