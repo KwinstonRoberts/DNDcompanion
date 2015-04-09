@@ -51,24 +51,22 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             }
         }
     }else{
-        	$queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
-        	if(!$result = mysqli_query($conn, $queryPOST)){
-        		mysqli_query($conn,"INSERT INTO players(PLayer_Name) VAlUES('$row[i]')");
+        $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
+       	if(!$result = mysqli_query($conn, $queryPOST)){
+        	mysqli_query($conn,"INSERT INTO players(PLayer_Name) VAlUES('$row[i]')");
+       	}
+       	while($row = mysqli_fetch_row($result)){
+         	for ($i=0; $i<length($row); $i++){
+       	 		$columns = array('Character_Level','Class','Paragon_Path','Epic_Destiny',
+                      'Exp','Race','Size','Age','Gender','Height',
+                      'Weight','Alignment','Diety','Adventuring_Company');
+         		if($row[i]==null){
+       	 			mysqli_query($conn,"INSERT INTO players($columns[i]) VAlUES('$row[i]'')");
+       	 		}else{
+    	 			mysqli_query($conn,"UPDATE players set $columns[i]='$row[i]'");
+        	    }
         	}
-        	while($row = mysqli_fetch_row($result)){
-        	 	for ($i=0; $i<length($row); $i++){
-       		 		$columns = array('Character_Level','Class','Paragon_Path','Epic_Destiny',
-                        'Exp','Race','Size','Age','Gender','Height',
-                        'Weight','Alignment','Diety','Adventuring_Company');
-        	 		if($row[i]==null){
-       		 			mysqli_query($conn,"INSERT INTO players($columns[i]) VAlUES('$row[i]'')");
-        	 		}else{
-       		 			mysqli_query($conn,"UPDATE players set $columns[i]='$row[i]'");
-
-        		 	}
-        		}
-        		echo "Inserted data";
-        	}
+       	echo "Inserted data";
         }
     }
 }
