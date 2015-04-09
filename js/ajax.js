@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
 
-    $(".dropdown-menu").on('click', 'li', function(){
+    $(".dropdown-menu").on('click', 'li a', function(){
         console.log(this.text);
         $.ajax({
             type: 'POST',
