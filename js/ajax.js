@@ -53,13 +53,13 @@ $(document).ready(function(){
                 console.log(response);
                 var info = response.split(",");
                 $('#btn-character').html(name);
-
+                $('input').prop('disabled',false);
                 var fields = ['Level','Class','Paragon Path','Epic Destiny',
                             'Total XP','Race','Size','Age','Gender','Height',
                             'Weight','Alignment','Diety','Adventuring Company']; 
 
                 for(var i=0; i<info.length; i++){
-
+                    $(fields[i]).val(info[i]);
                 }
             }
         });
