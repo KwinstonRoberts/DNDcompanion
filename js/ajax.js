@@ -52,8 +52,7 @@ $(document).ready(function(){
             success: function(response){
                 console.log(response);
                 var names = response.split(",");
-                    $('#btn-player').html(name);
-                }
+                $('#btn-player').html(name);
             }
         });
     });
