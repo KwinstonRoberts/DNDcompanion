@@ -17,11 +17,11 @@
 		for($i=0; $i<count($segment1); $i++){
                     if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment1[$i][1] . '">
-			<input type="number" name="' . $segment1[$i][0] . '" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+			<input type="number" name="' . $segment1[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment1[$i][0] . '</label></div>';
 
                     }else{
 			echo '<div class=" form-group col-md-' . $segment1[$i][1] . '">
-			<input name="' . $segment1[$i][0] . '" class="form-control"><label class="tiny">' . $segment1[$i][0] . '</label></div>';
+			<input name="' . $segment1[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment1[$i][0] . '</label></div>';
                     }
 		}?>
             </div>
@@ -32,10 +32,10 @@
 		for($i=0; $i<count($segment2); $i++){
                     if($segment2[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment2[$i][1] . '">
-			<input type="number" name="' . $segment2[$i][0] . '" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+			<input type="number" name="' . $segment2[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment2[$i][0] . '</label></div>';
                     }else{
 			echo '<div class=" form-group col-md-' . $segment2[$i][1] . '">
-			<input name="' . $segment2[$i][0] . '" class="form-control"><label class="tiny">' . $segment2[$i][0] . '</label></div>';
+			<input name="' . $segment2[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment2[$i][0] . '</label></div>';
                     }
 		}?>
             </div>
