@@ -27,7 +27,7 @@
             </div>
             <div class="row">
 		<?php $segment2 = array(array("Race", "3",false),array("Size", "1",false)
-		,array("Age", "1",true),array("Gender", "1",true),array("Height", "1",true)
+		,array("Age", "1",true),array("Gender", "1",false),array("Height", "1",true)
 		,array("Weight", "1",true), array("Alignment", '1',false),array("Diety", '1',false),array("Adventuring_Company", '2',false));
 		for($i=0; $i<count($segment2); $i++){
                     if($segment2[$i][2]==true){
