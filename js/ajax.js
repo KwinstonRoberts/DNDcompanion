@@ -18,11 +18,12 @@ $(document).ready(function(){
 
 
     $(".dropdown-menu").on('click', 'li a', function(){
-        console.log(this.text);
+        var name = this.text;
+        console.log(name);
         $.ajax({
             type: 'POST',
             url: 'query.php',
-            data:{name: this.text},
+            data:{name: name},
             success: function(response){
                 console.log(response);
                 var names = response.split(",");
@@ -31,6 +32,7 @@ $(document).ready(function(){
                     console.log(names[i]);
                     var html = $('#characters').html();
                     $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
+                    $("#playername").value(name);
                 }
             }
         });
