@@ -23,7 +23,8 @@ $(document).ready(function(){
         $.ajax({
             type: 'POST',
             url: 'query.php',
-            data:{name: name},
+            data:{name: name,
+                    header: 0},
             success: function(response){
                 console.log(response);
                 var names = response.split(",");
@@ -32,8 +33,26 @@ $(document).ready(function(){
                     console.log(names[i]);
                     var html = $('#characters').html();
                     $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
-                    $('#btn-player').html(name)
+                    $('#btn-player').html(name);
                     $("#playername").val(name);
+                }
+            }
+        });
+    });
+
+      $(".dropdown-menu").on('click', '.character a', function(){
+        var name = this.text;
+        console.log(name);
+        $('input [name="Character_Name"]').val(name);
+        $.ajax({
+            type: 'POST',
+            url: 'query.php',
+            data:{name: name,
+                    header: 1},
+            success: function(response){
+                console.log(response);
+                var names = response.split(",");
+                    $('#btn-player').html(name);
                 }
             }
         });
