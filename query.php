@@ -50,6 +50,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                 echo $response;
                 mysqli_free_result($response);
             }
+        }else{
+            die(mysqli_error($conn));
         }
     }else{
         $queryPOST = 'SELECT * FROM players WHERE Player_Name ="$name"';
