@@ -55,7 +55,7 @@ $(document).ready(function(){
                 $('#btn-character').html(name);
                 $('input').prop('disabled',false);
                 var fields = ['Character_Level','Class','Paragon_Path','Epic_Destiny',
-                            'Total XP','Race','Size','Age','Gender','Height',
+                            'Exp','Race','Size','Age','Gender','Height',
                             'Weight','Alignment','Diety','Adventuring_Company']; 
 
                 for(var i=0; i<info.length; i++){
