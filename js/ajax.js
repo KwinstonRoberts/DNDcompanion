@@ -23,6 +23,13 @@ $(document).ready(function(){
             data:{name: this.text},
             success: function(response){
                 console.log(response);
+                var names = response.split(",");
+                 $('#characters').html("");
+                for (var i=0; i<names.length; i++){
+                    console.log(names[i]);
+                    var html = $('#characters').html();
+                    $('#players').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
+                }
             }
         });
     });
