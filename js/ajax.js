@@ -13,20 +13,20 @@ $(document).ready(function(){
             }
         }
     });
-});
 
-$("li").click(function(event){
-    console.log("!!!");
-    $.ajax({
-        type: 'POST',
-        url: 'query.php',
-        data:{name: $(this).text()},
-        success: function(response){
-            console.log(response);
-        }
+
+    $("li").click(function(){
+        console.log("!!!");
+        $.ajax({
+            type: 'POST',
+            url: 'query.php',
+            data:{name: $(this).text},
+            success: function(response){
+                console.log(response);
+            }
+        });
     });
 });
-
 // $('#players').click(saveData());
 
 
