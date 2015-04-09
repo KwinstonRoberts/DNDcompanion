@@ -5,93 +5,148 @@
 var Class = {
     'name': "",
     'scores': "",
-    'AC': 0,
-    'FORT': 0,
-    'REF': 0,
-    'WILL': 0
+    'powerType': "",
+    'surges': 0,
+    'skills': 0,
+    'defenseBonus': {
+        'FORT': 0,
+        'REF': 0,
+        'WILL': 0
+    }
 };
 
-var cRace;      // Character Race
-var cEXP;       // Character experience
+var Race = {
+    'name': "",
+    'language': "",
+    'power': "",
+    'at-will': "",
+    'features': ["", ""],
+    'stats': {
+        Choice: false,
+        choiceList: ["" , ""]
+    },
+    'AScoreBonus': {
+        'STR': 0,
+        'CON': 0,
+        'DEX': 0,
+        'INT': 0,
+        'WIS': 0,
+        'CHA': 0
+    },
+    'defenseBonus': {
+        'FORT': 0,
+        'REF': 0,
+        'WILL': 0
+    },
+    'skillBonus': {
+        'Acrobatics': 0,
+        'Arcana': 0,
+        'Athletics': 0,
+        'Bluff': 0,
+        'Diplomacy': 0,
+        'Dungeoneering': 0,
+        'Endurance': 0,
+        'Heal': 0,
+        'History': 0,
+        'Insight': 0,
+        'Intimidate': 0,
+        'Nature': 0,
+        'Perception': 0,
+        'Religion': 0,
+        'Stealth': 0,
+        'Streetwise': 0,
+        'Thievery': 0,
+        'Speed': 0
+    }
+};
 
-var cParagon;   // Paragon Path
-var cDestiny;   // Epic Destiny
+var EXP;       // Character experience
+
+var Paragon;   // Paragon Path
+var Destiny;   // Epic Destiny
 
 // ABILITY SCORES //
 {
-    var STR;       // Strength
-    var STRam;     // Ability Mod
-    var STRlvl;    // Mod + 1/2 Level
+    var STR = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
     
-    var CON;       // Constitution
-    var CONam;     // Ability Mod
-    var CONlvl;    // Mod + 1/2 Level
+    var CON = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
     
-    var DEX;       // Dexterity
-    var DEXam;     // Ability Mod
-    var DEXlvl;    // Mod + 1/2 Level
+    var DEX = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
     
-    var INT;       // Intelligence
-    var INTam;     // Ability Mod
-    var INTlvl;    // Mod + 1/2 Level
+    var INT = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
     
-    var WIS;       // Wisdom
-    var WISam;     // Ability Mod
-    var WISlvl;    // Mod + 1/2 Level
+    var WIS = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
     
-    var CHA;       // Charisma
-    var CHAam;     // Ability Mod
-    var CHAlvl;    // Mod + 1/2 Level
+    var CHA = {
+        'base': 0,
+        'abilityMod': 0,
+        'lvlMod': 0
+    };
 }
 
 // DEFENSES //
 {
-    // AC //
-    var AC;
-    var ACarmor;
-    var AClmod;
-    var ACclass;
-    var ACfeat;
-    var ACenh;
-    var ACmisc;
-    var ACmisc2;
+    var AC = {
+        'base': 0,
+        'armorMod': 0,
+        'lvlMod': 0,
+        'featMod': 0,
+        'enhancement': 0,
+        'misc': [0, 0]
+    };
     
-    // FORT //
-    var FORT;
-    var FORTarmor;
-    var FORTlmod;
-    var FORTclass;
-    var FORTfeat;
-    var FORTenh;
-    var FORTmisc;
-    var FORTmisc2;
+    var FORT = {
+        'base': 0,
+        'armorMod': 0,
+        'lvlMod': 0,
+        'featMod': 0,
+        'enhancement': 0,
+        'misc': [0, 0]
+    };
     
-    // REF //
-    var REF;
-    var REFarmor;
-    var REFlmod;
-    var REFclass;
-    var REFfeat;
-    var REFenh;
-    var REFmisc;
-    var REFmisc2;
+    var REF = {
+        'base': 0,
+        'armorMod': 0,
+        'lvlMod': 0,
+        'featMod': 0,
+        'enhancement': 0,
+        'misc': [0, 0]
+    };
     
-    // WILL //
-    var WILL;
-    var WILLarmor;
-    var WILLlmod;
-    var WILLclass;
-    var WILLfeat;
-    var WILLenh;
-    var WILLmisc;
-    var WILLmisc2;
+    var WILL = {
+        'base': 0,
+        'armorMod': 0,
+        'lvlMod': 0,
+        'featMod': 0,
+        'enhancement': 0,
+        'misc': [0, 0]
+    };
 }
 
 // HIT POINTS //
 {
     var maxHP;    
     var surgeValue;
-    var surgesPDay;
     
     var curHP;
     var curSurges;
