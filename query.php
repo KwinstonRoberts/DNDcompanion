@@ -49,8 +49,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             }
         }
     }else{
-        $queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
+        $queryPOST = 'SELECT * FROM players WHERE Player_Name ="$name"';
        	    $result = mysqli_query($conn, $queryPOST);
+            if(count(mysqli_fetch_row($result))<1){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')") or die(mysqli_error($conn));
         	}
        	while($row = mysqli_fetch_row($result)){
@@ -59,12 +60,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
        	 		$columns = array('Player_Name','Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
-         		if($row[i]==null){
-       	 			mysqli_query($conn,"INSERT INTO players(" . $columns[i] . ") VAlUES('" . $row[i] . "')");
-       	 		}else{
-    	 			mysqli_query($conn,"UPDATE players set " . $columns[i] . "='" . $row[i] . "'");
-        	    }
-        	    $response = $response . $row[i];
+         		
+     			mysqli_query($conn,"UPDATE players set $columns[i]='$row[i]' WHERE Player_Name = '$name'");
+                $response = $response . $row[i];
         	}
         }
         echo $response;
