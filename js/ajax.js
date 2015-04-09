@@ -59,7 +59,7 @@ $(document).ready(function(){
                             'Weight','Alignment','Diety','Adventuring Company']; 
 
                 for(var i=0; i<info.length; i++){
-                    $(fields[i]).val(info[i]);
+                    $("" + fields[i]).val(info[i]);
                 }
             }
         });
