@@ -17,7 +17,7 @@ $(document).ready(function(){
     });
 
 
-    $(".dropdown-menu").on('click', 'li .player a', function(){
+    $(".dropdown-menu").on('click', '.player a', function(){
         var name = this.text;
         console.log(name);
         $.ajax({
