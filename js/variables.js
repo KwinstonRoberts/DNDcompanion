@@ -80,6 +80,26 @@ var Race = {
     }
 };
 
+var Char = {
+    name: "",
+    race: Race['name'],
+    class: Class['name'],
+    paragon: "",
+    destiny: "",
+    level: 0,
+    experience: 0,
+    
+    size: "",
+    age: 0,
+    gender: "",
+    height: "",
+    weight: "",
+    
+    alignment: "",
+    diety: "",
+    company: ""
+};
+
 // ABILITY SCORES //
 {
     var STR = {
