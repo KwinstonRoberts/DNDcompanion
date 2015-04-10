@@ -37,7 +37,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                 . "," . $row[10] . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14]
                 . "," . $row[15];  
 	   	        echo $response;
-      	        mysqli_free_result($response);
+      	        mysqli_free_result($result);
             }
         }
 	}else if($_POST['header']==0){
@@ -47,7 +47,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             while($row = mysqli_fetch_row($result)){
                     $response = $response . $row[1] . ",";  
                 echo $response;
-                mysqli_free_result($response);
+                mysqli_free_result($result);
             }
         }else{
             die(mysqli_error($conn));
@@ -76,9 +76,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $result = mysqli_query($conn, $count);
         if($count<1){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
-            $result2 = mysqli_query($conn, $queryPOST);
         }
-       	while($row = mysqli_fetch_row($result2)){
+        $result = mysqli_query($conn, $queryPOST);
+       	while($row = mysqli_fetch_row($result)){
          	for ($i=0; $i<count($data); $i++){
        	 		$columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
@@ -89,7 +89,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         	}
         }
         echo $response;
-        mysqli_free_result($response);
+        mysqli_free_result($result);
     }
 }
 mysqli_close($conn);
