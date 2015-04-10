@@ -76,16 +76,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         if(mysqli_query($conn,$count)<1){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
         }
-        $result = mysqli_query($conn, $queryPOST);
-       	while($row = mysqli_fetch_row($result)){
-         	for ($i=0; $i<count($data); $i++){
-       	 		$columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
+        $columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
+
+         	for ($i=0; $i<count($data); $i++){
+       	 		
      			mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name='$name'");
-                $response = $response . $data[$i] . ",";
-        	}
-            echo $response;
+                //$response = $response . $data[$i] . ",";
+            }
+            echo mysqli_error($conn);
             mysqli_free_result($result);
         }
     }
