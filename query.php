@@ -71,7 +71,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
         $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
 
-        $queryPOST = 'SELECT EXISTS(SELECT * FROM players WHERE Player_Name ="$name")';
+        $queryPOST = 'SELECT * FROM players WHERE Player_Name="$name"';
         if(!mysqli_query($conn, $queryPOST)){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
             $result = mysqli_query($conn, $queryPOST);
