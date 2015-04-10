@@ -32,10 +32,10 @@ $(document).ready(function(){
                 for (var i=0; i<names.length; i++){
                     console.log(names[i]);
                     var html = $('#characters').html();
-                    $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');
-                    $('#btn-player').html(name);
-                    $("#playername").val(name);
+                    $('#characters').html(html + '<li class="character"><a>' + names[i] + '</a></li>');  
                 }
+                $('#btn-player').html(name);
+                $("#playername").val(name);
             }
         });
     });
@@ -67,10 +67,26 @@ $(document).ready(function(){
        $("#btn-save").click(function(){
         var name = $('#playername').val();
         console.log(name);
+        collect();
         $.ajax({
             type: 'POST',
             url: 'query.php',
             data:{name: name,
+                    character : character
+                    level : level
+                    Class : Class
+                    Paragon : Paragon
+                    Destiny : Destiny
+                    EXP : EXP
+                    Race : Race
+                    size : size
+                    age : age
+                    gender : gender
+                    height : height
+                    weight : weight
+                    alignment :alignment
+                    diety : diety
+                    company : company
                 header: 2},
             success: function(response){
                 console.log(response);
