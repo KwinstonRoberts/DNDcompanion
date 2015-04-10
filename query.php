@@ -68,7 +68,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $alignment = $_POST['alignment'];
         $diety = $_POST['diety'];
         $company = $_POST['company'];
-
+        $response = "";
         $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
 
         $queryPOST = 'SELECT * FROM players WHERE Player_Name="$name"';
@@ -79,8 +79,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             $result = mysqli_query($conn, $queryPOST);
         }
        	while($row = mysqli_fetch_row($result)){
-       		$response = "";
-         	for ($i=0; $i<count($row); $i++){
+       		
+         	for ($i=0; $i<count($data); $i++){
        	 		$columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
