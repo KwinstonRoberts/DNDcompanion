@@ -67,7 +67,6 @@ $(document).ready(function(){
        $("#btn-save").click(function(){
         var name = $('#playername').val();
         console.log(name);
-        collect();
         $.ajax({
             type: 'POST',
             url: 'query.php',
