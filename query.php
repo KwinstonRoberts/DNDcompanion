@@ -57,6 +57,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
        	    $result = mysqli_query($conn, $queryPOST);
             if(count(mysqli_fetch_row($result))<1){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')") or die(mysqli_error($conn));
+            $result = mysqli_query($conn, $queryPOST);
         	}
        	while($row = mysqli_fetch_row($result)){
        		$response = "";
@@ -65,7 +66,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
          		
-     			mysqli_query($conn,"UPDATE players set " . $columns[$i] . " ='" . $row[$i] . "' WHERE Player_Name = '$name'");
+     			mysqli_query($conn,"UPDATE players set $columns[$i] ='$row[$i]' WHERE Player_Name = '$name'");
                 $response = $response . $row[$i];
         	}
         }
