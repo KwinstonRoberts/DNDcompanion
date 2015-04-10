@@ -85,7 +85,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
          		
-     			mysqli_query($conn,"UPDATE players set $columns[$i] = '$data[$i]' WHERE Player_Name = '$name'");
+     			mysqli_query($conn,"UPDATE players set" .  $columns[$i] .  "=" . $data[$i] . "WHERE Player_Name = '$name'");
                 $response = $response . $data[$i];
         	}
         }
