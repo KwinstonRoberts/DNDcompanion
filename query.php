@@ -82,7 +82,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
         for ($i=0; $i<count($data); $i++){
        	 		
-		mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name=$name");
+		mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name=`$name`;");
         //$response = $response . $data[$i] . ",";
         }
         echo mysqli_error($conn);
