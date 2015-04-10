@@ -53,20 +53,38 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             die(mysqli_error($conn));
         }
     }else{
+        $character = $_POST['character'];
+        $level = $_POST['level'];
+        $class = $_POST['Class'];
+        $paragon = $_POST['Paragon'];
+        $destiny = $_POST['Destiny'];
+        $exp = $_POST['EXP'];
+        $race = $_POST['Race'];
+        $size = $_POST['size'];
+        $age = $_POST['age'];
+        $gender = $_POST['gender'];
+        $height = $_POST['height'];
+        $weight = $_POST['weight'];
+        $alignment = $_POST['alignment'];
+        $diety = $_POST['diety'];
+        $company = $_POST['company'];
+
+        $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
+
         $queryPOST = 'SELECT EXISTS(SELECT * FROM players WHERE Player_Name ="$name")';
-        if(mysqli_query($conn, $queryPOST)){
+        if(!mysqli_query($conn, $queryPOST)){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
             $result = mysqli_query($conn, $queryPOST);
         }
        	while($row = mysqli_fetch_row($result)){
        		$response = "";
-         	for ($i=1; $i<count($row); $i++){
-       	 		$columns = array("",'Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
+         	for ($i=0; $i<count($row); $i++){
+       	 		$columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
          		
-     			mysqli_query($conn,"UPDATE players set $columns[$i] ='$row[$i]' WHERE Player_Name = '$name'");
-                $response = $response . $row[$i];
+     			mysqli_query($conn,"UPDATE players set $columns[$i] = '$data[$i]' WHERE Player_Name = '$name'");
+                $response = $response . $data[$i];
         	}
         }
         echo $response;
