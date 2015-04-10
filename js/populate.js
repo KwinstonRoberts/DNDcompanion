@@ -2,7 +2,7 @@ function updateVar() {
     
     Char['name'] = $('[name="Character_Name"]').val();
     Char['level'] = $('[name="Character_Level"]').val();
-    Char['cclass'] = $('[name="Class"]').val();
+    Char['cclass'] = $('[name="cClass"]').val();
     
     Char['paragon'] = $('[name="Character_Path"]').val();
     Char['destiny'] = $('[name="Epic_Destiny"]').val();
