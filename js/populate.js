@@ -8,7 +8,7 @@ function updateVar() {
     Char['destiny'] = $('[name="Epic_Destiny"]').val();
     Char['experience'] = $('[name="Exp"]').val();
     
-    Race['name'] = $('[name="Race"]').val();
+    Char['race'] = $('[name="Race"]').val();
     
     Char['size'] = $('[name="Size"]').val();
     Char['age'] = $('[name="Age"]').val();
