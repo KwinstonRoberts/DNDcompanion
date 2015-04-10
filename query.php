@@ -85,10 +85,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Weight','Alignment','Diety','Adventuring_Company');
          		
      			mysqli_query($conn,"UPDATE players set" .  $columns[$i] .  "=" . $data[$i] . "WHERE Player_Name = '$name'");
-                $response = $response . $data[$i];
+                $response = $response . $data[$i] . ",";
         	}
         }
-        echo $data[1];
+        echo ;
         mysqli_free_result($response);
     }
 }
