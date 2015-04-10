@@ -53,12 +53,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             die(mysqli_error($conn));
         }
     }else{
-        $queryPOST = 'SELECT * FROM players WHERE Player_Name ="$name"';
-       	    $result = mysqli_query($conn, $queryPOST);
-            if(count(mysqli_fetch_row($result))<1){
-        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')") or die(mysqli_error($conn));
+        $queryPOST = 'SELECT EXISTS(SELECT * FROM players WHERE Player_Name ="$name")';
+        if(mysqli_query($conn, $queryPOST)){
+        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
             $result = mysqli_query($conn, $queryPOST);
-        	}
+        }
        	while($row = mysqli_fetch_row($result)){
        		$response = "";
          	for ($i=1; $i<count($row); $i++){
