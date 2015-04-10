@@ -2,7 +2,7 @@ function updateVar() {
     
     Char['name'] = $('[name="Character_Name"]').val();
     Char['level'] = $('[name="Character_Level"]').val();
-    Char['Class']['name'] = $('[name="Class"]').val();
+    Char['Class'] = $('[name="Class"]').val();
     
     Char['paragon'] = $('[name="Character_Path"]').val();
     Char['destiny'] = $('[name="Epic_Destiny"]').val();
@@ -17,6 +17,6 @@ function updateVar() {
     Char['weight'] = $('[name="Weight"]').val();
     Char['alignment'] = $('[name="Alignment"]').val();
     Char['diety'] = $('[name="Diety"]').val();
-    Char['company'] = $('[name="Adventuring_company"]').val();
+    Char['company'] = $('[name="Adventuring_Company"]').val();
     
 }
