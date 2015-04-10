@@ -88,7 +88,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                 $response = $response . $data[$i];
         	}
         }
-        echo $data;
+        echo $data[1];
         mysqli_free_result($response);
     }
 }
