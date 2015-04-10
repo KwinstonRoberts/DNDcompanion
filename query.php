@@ -72,10 +72,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
 
         $queryPOST = 'SELECT * FROM players WHERE Player_Name="$name"';
-        $count = 'SELECT COUNT(*) FROM players WHERE Player_Name="$name"';
-        if(mysqli_query($conn,$count)<1){
-        	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
-        }
+        mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
         $columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
