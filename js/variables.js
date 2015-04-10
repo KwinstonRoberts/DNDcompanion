@@ -63,7 +63,7 @@ var Race = {
 var Char = {
     name: "",
     race: Race['name'],
-    class: Class['name'],
+    Class: Class['name'],
     paragon: "",
     destiny: "",
     level: 0,
