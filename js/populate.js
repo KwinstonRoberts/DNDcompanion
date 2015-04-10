@@ -1,4 +1,3 @@
-function collect(){
 	var character = $('[name="Character_Name"]').val();
 	var level = $('[name="Character_Level"]').val();
 	Class['name'] = $('[name="Class"]').val();
@@ -14,4 +13,3 @@ function collect(){
 	var alignment = $('[name="Alignment"]').val();
 	var diety = $('[name="Diety"]').val();
 	var company = $('[name="Adventuring_company"]').val();
-}
