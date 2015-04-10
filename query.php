@@ -81,7 +81,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Weight','Alignment','Diety','Adventuring_Company');
 
         for ($i=0; $i<count($data); $i++){
-       	$query = "UPDATE players SET $columns[$i]=$data[$i] WHERE Player_Name='$name'";	
+       	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Player_Name='$name'";	
 		mysqli_query($conn, $query);
         //$response = $response . $data[$i] . ",";
         }
