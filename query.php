@@ -68,10 +68,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $alignment = $_POST['alignment'];
         $diety = $_POST['diety'];
         $company = $_POST['company'];
+
         $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
+
         $queryPOST = 'SELECT * FROM players WHERE Player_Name="$name"';
         $count = 'SELECT COUNT(*) FROM players WHERE Player_Name="$name"';
-        if(mysqli_query($conn,$count)){
+        if(mysqli_query($conn,$count)<1){
         	mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
         }
         $result = mysqli_query($conn, $queryPOST);
@@ -83,9 +85,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
      			mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name='$name'");
                 $response = $response . $data[$i] . ",";
         	}
-             echo $response;
+            echo $response;
+            mysqli_free_result($result);
         }
-        mysqli_free_result($result);
     }
 }
 mysqli_close($conn);
