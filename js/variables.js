@@ -2,26 +2,6 @@
  * This file will hold all the variables to be used in the sheet.
  */
 
-var Char = {
-    name: "",
-    race: Race['name'],
-    class: Class['name'],
-    paragon: "",
-    destiny: "",
-    level: 0,
-    experience: 0,
-    
-    size: "",
-    age: 0,
-    gender: "",
-    height: "",
-    weight: "",
-    
-    alignment: "",
-    diety: "",
-    company: ""
-};
-
 var Class = {
     name: "",
     scores: "",
