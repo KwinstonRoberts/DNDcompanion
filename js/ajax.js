@@ -72,21 +72,21 @@ $(document).ready(function(){
             type: 'POST',
             url: 'query.php',
             data:{name: name,
-                    character : character
-                    level : level
-                    Class : Class
-                    Paragon : Paragon
-                    Destiny : Destiny
-                    EXP : EXP
-                    Race : Race
-                    size : size
-                    age : age
-                    gender : gender
-                    height : height
-                    weight : weight
-                    alignment :alignment
-                    diety : diety
-                    company : company
+                    character : character,
+                    level : level,
+                    Class : Class,
+                    Paragon : Paragon,
+                    Destiny : Destiny,
+                    EXP : EXP,
+                    Race : Race,
+                    size : size,
+                    age : age,
+                    gender : gender,
+                    height : height,
+                    weight : weight,
+                    alignment :alignment,
+                    diety : diety,
+                    company : company,
                 header: 2},
             success: function(response){
                 console.log(response);
