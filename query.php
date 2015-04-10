@@ -73,6 +73,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
         $queryPOST = 'SELECT * FROM players WHERE Player_Name="$name"';
         mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
+        echo mysqli_error($conn);
         $columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
