@@ -74,7 +74,7 @@ $(document).ready(function(){
             data:{name: name,
                     character : Char['name'],
                     level : Char['level'],
-                    cclass : Char['cclass'],
+                    Class : Char['cclass'],
                     Paragon : Char['paragon'],
                     Destiny : Char['destiny'],
                     EXP : Char['experience'],
