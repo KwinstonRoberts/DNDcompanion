@@ -76,7 +76,7 @@ var Char = {
     weight: "",
     
     alignment: "",
-    diety: "",
+    deity: "",
     company: ""
 };
 
