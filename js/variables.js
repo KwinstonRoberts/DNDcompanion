@@ -4,8 +4,8 @@
 
 var Char = {
     name: "",
-    race: Race[name],
-    class: Class[name],
+    race: Race['name'],
+    class: Class['name'],
     paragon: "",
     destiny: "",
     level: 0,
