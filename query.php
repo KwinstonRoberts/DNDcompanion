@@ -80,14 +80,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Alignment','Diety','Adventuring_Company');
 
-         	for ($i=0; $i<count($data); $i++){
+        for ($i=0; $i<count($data); $i++){
        	 		
-     			mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name='$name'");
-                //$response = $response . $data[$i] . ",";
-            }
-            echo mysqli_error($conn);
-            mysqli_free_result($result);
+		mysqli_query($conn,"UPDATE players set " . $columns[$i] . "=" . $data[$i] . " WHERE Player_Name='$name'");
+        //$response = $response . $data[$i] . ",";
         }
+        echo mysqli_error($conn);
+        mysqli_free_result($result);
     }
 }
 mysqli_close($conn);
