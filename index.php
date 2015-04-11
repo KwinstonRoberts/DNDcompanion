@@ -216,15 +216,26 @@
 			for($q=0;$q<2; $q++){
 				echo '<div class="row">';
 				for($r=0;$r<4;$r++){
+					if($q!=2){
 					if($r != 1){
 						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
 								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
 								<h3 class="target-' . $segment7[$q][$r][0] . '"></h3>
 								</div>';
 					}else{
-						if($q!=2){
+						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
+								<h3 class="tiny"> Passive Sense </h3>
+								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
+							</div>';
+						}else{
+							if($r != 1){
 						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
 								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
+								<h3 class="target-' . $segment7[$q][$r][0] . '"></h3>
+								</div>';
+					}else{
+						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
+								<h3 class="tiny">'  '</h3>
 								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
 							</div>';
 						}
