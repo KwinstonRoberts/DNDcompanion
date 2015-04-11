@@ -243,7 +243,7 @@
 				}
 			}
 				         echo   '<div class="col-md-8">
-		                            <label class="tiny"> Special Movement </label> 
+		                            <label class="tiny"> Special Senses </label> 
 						<input name="special-movement" class="form-control">
 					</div>
 					<div class="col-md-4">
@@ -264,8 +264,8 @@
 		                    <button class="btn btn-default space-fix"> Add </button> 
 						</div>
 					</div>';
-			}
 			echo '</div>';
+		}
 	}?>
 		</div>
 	</div>	
