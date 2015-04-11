@@ -162,10 +162,10 @@
 							</div>';
 							echo '<div class="row">
 							<div class="col-md-4">
-								<span><h3 class="tiny"> USED </h3><span> <input class="form-control" type="checkbox" name="2ndWind">
-							</div>';
+								<span><h3 class="tiny"> USED </h3></span> <input class="form-control" type="checkbox" name="2ndWind">
+							</div></div>';
 							echo '<div class="row">
-							<div class="col-md-8">
+							<div class="col-md-12">
 								<input class="form-control" type="text" name="TempHitPoints">
 							</div>';
 							$segment9 = array('Acrobatics', 'Arcana','Athletics','Bluff','Diplomacy','Dungeoneering','Endurance','Heal','History','Insight','Intimidate','Nature','Perception','Religion','Stealth','Streetwise','Thievery');
