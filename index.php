@@ -15,7 +15,9 @@
                                 ,array("Class", "2",false),array("Paragon_Path", "2",false),array("Epic_Destiny", "2",false)
                                 ,array("Exp", "2",true));
 		for($i=0; $i<count($segment1); $i++){
-                    if($segment1[$i][2]==true){
+				if($i==1){
+					echo '<h3 name="Character_Level"></h3><label>Character Level</label>';
+				}else if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment1[$i][1] . '">
 			<input type="number" name="' . $segment1[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment1[$i][0] . '</label></div>';
 

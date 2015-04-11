@@ -54,7 +54,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         }
     }else{
         $character = $_POST['character'];
-        $level = $_POST['level'];
         $class = $_POST['Class'];
         $paragon = $_POST['Paragon'];
         $destiny = $_POST['Destiny'];
@@ -69,10 +68,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $diety = $_POST['diety'];
         $company = $_POST['company'];
 
-        $data = array($character,$level,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
+        $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
 
         mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
-        $columns = array('Character_Name','Character_Level','Class','Paragon_Path','Epic_Destiny',
+        $columns = array('Character_Name','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Allignment','Deity','Adventuring_Company');
 
