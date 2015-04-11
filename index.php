@@ -185,17 +185,21 @@
 			      </div>';
 			for ($u=0;$u<17;$u++){
 				echo '<div class="row">';
-				for ($v=0;$v<6; $v++){
-					if($v = 1){
-						echo '<div class="col-md-' '">';
+				for ($v=0;$v<6;$v++){
+					if($v == 1){
+						echo '<div class="col-md-4>';
 						echo '<h4 class="tiny">' . $segment9[$u] . '</h4>
 					</div>';
-					}else{				
-						echo '<div class="col-md-">';
+					}else if($v!=4 && $v!=5){				
+						echo '<div class="col-md-2">';
 						echo '<h3 class="target"></h3>
 					</div>';
-						}
+					}else{
+						echo '<div class="col-md-2">';
+						echo '<h3 class="target"></h3>
+						</div>';
 					}
+				}
 				echo '</div>';
 			}
 		}else if($i == 1){
