@@ -156,7 +156,18 @@
 									<input type="number" class="form-control target-uses">
 								</div>
 							</div>';
-
+							echo '<div class="row">
+							<div class="col-md-8">
+								<h3 class="tiny"> Second Wind 1/Encounter </h3>
+							</div>'
+							echo '<div class="row">
+							<div class="col-md-4">
+								<span><h3 class="tiny"> USED </h3> <input class="form-control" type="checkbox" name="2ndWind">
+							</div>';
+							echo '<div class="row">
+							<div class="col-md-8">
+								<input class="form-control" type="text" name="TempHitPoints">
+							</div>';
 							$segment9 = array('Acrobatics', 'Arcana','Athletics','Bluff','Diplomacy','Dungeoneering','Endurance','Heal','History','Insight','Intimidate','Nature','Perception','Religion','Stealth','Streetwise','Thievery');
 			
 			echo '<div class="row"><div class="col-md-12 title gray">
