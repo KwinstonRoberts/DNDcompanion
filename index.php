@@ -216,7 +216,7 @@
 			for($q=0;$q<2; $q++){
 				echo '<div class="row">';
 				for($r=0;$r<4;$r++){
-					if($q!=2){
+					if($q!=1){
 					if($r != 1){
 						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
 								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
