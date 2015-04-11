@@ -164,8 +164,7 @@
 							<div class="col-md-2">
 							 <h3 class="tiny"> USED </h3>
 							</div>';
-							echo '<div class="row">
-							<div class="col-md-2">
+							echo '<div class="col-md-2">
 							 <input class="form-control" type="checkbox" name="2ndWind">
 							</div></div>';
 							echo '<div class="row">
