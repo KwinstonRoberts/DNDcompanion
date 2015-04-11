@@ -16,7 +16,7 @@
                                 ,array("Exp", "2",true));
 		for($i=0; $i<count($segment1); $i++){
 				if($i==1){
-					echo '<div class="col-md-1"><h3 name="Character_Level"></h3><label class="tiny">Character Level</label></div>';
+					echo '<div class="col-md-1"><h3 name="Character_Level"></h3><label class="tiny space-fix">Character Level</label></div>';
 				}else if($segment1[$i][2]==true){
 			echo '<div class=" form-group col-md-' . $segment1[$i][1] . '">
 			<input type="number" name="' . $segment1[$i][0] . '" class="form-control" value=""><label class="tiny">' . $segment1[$i][0] . '</label></div>';
