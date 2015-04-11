@@ -207,7 +207,6 @@
 		                            <button class="btn btn-default space-fix"> Add </button> 
 					</div>
 		        	      </div>';
-			}
 		echo '</div>';
 		echo '<div class="row">
 				<div class="col-md-12 title gray">
@@ -287,7 +286,7 @@
 					</div>';
 			}
 			echo '</div>';
-			
+		}
 	}?>
 		</div>
 	</div>	
