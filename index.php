@@ -162,7 +162,7 @@
 							</div>';
 							echo '<div class="row">
 							<div class="col-md-4">
-								<span><h3 class="tiny"> USED </h3> <input class="form-control" type="checkbox" name="2ndWind">
+								<span><h3 class="tiny"> USED </h3><span> <input class="form-control" type="checkbox" name="2ndWind">
 							</div>';
 							echo '<div class="row">
 							<div class="col-md-8">
