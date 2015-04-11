@@ -207,6 +207,61 @@
 		                            <button class="btn btn-default space-fix"> Add </button> 
 					</div>
 		        	      </div>';
+			}
+		echo '</div>';
+		echo '<div class="row">
+				<div class="col-md-12 title gray">
+					<h3> SENSES </h3>
+				</div>
+			</div>';
+			echo        '<div class="row">
+							<div class="col-md-3">
+								<h3 class="tiny"> Score </h3>
+							</div>
+							<div class="col-md-3">
+								<h3 class="tiny"> Passive Sense </h3>
+							</div>
+							<div class="col-md-3">
+								<h3 class="tiny"> Base </h3>
+								</div>
+							<div class="col-md-3">
+								<h3 class="tiny"> Skill Bonuses </h3>
+							</div>
+						</div>';
+		$segment7 = array(array(array("Score",3),array("Passive Insight",3),array("Base",3),array("Skill Bonus",3)),
+					array(array("Score",3),array("Passive Perception",3),array("Base",3),array("Skill Bonus",3)));
+			for($q=0;$q<2; $q++){
+				echo '<div class="row">';
+				for($r=0;$r<4;$r++){
+					if($p != 1){
+						echo '<div class="col-md-' . $segment6[$q][$r][1] . ' gray">
+								<h3 class="target-' . $segment6[$q][$r][0] . '"></h3>
+								</div>';
+					}else{
+						echo '<div class="col-md-' . $segment6[$q][$p][1] . ' gray">
+								<h3 class="tiny">' . $segment6[$q][$p][0] . '</h3>
+								</div>';
+					}
+				}
+			}
+				         echo   '<div class="col-md-8">
+		                            <label class="tiny"> Special Movement </label> 
+						<input name="special-movement" class="form-control">
+					</div>
+					<div class="col-md-4">
+		                            <button class="btn btn-default space-fix"> Add </button> 
+					</div>
+		        	      </div>';
+				echo '</div>';
+				echo '<div class="row">
+		                        <div class="col-md-8">
+		                            <label class="tiny"> Special Movement </label> 
+						<input name="special-movement" class="form-control">
+					</div>
+					<div class="col-md-4">
+		                            <button class="btn btn-default space-fix"> Add </button> 
+					</div>
+		        	      </div>';
 			echo   '<div class="row">
 					   <div class="col-md-12 title gray">
 							<h3> FEATS </h3>
@@ -217,9 +272,22 @@
 							<select class="form-control" id="feats"></select>
 						</div>
 					</div>';
+					echo   '<div class="row">
+					   <div class="col-md-12 title gray">
+							<h3> FEATS </h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8">
+							<select class="form-control" id="feats"></select>
+						</div>
+						<div class="col-md-4">
+		                    <button class="btn btn-default space-fix"> Add </button> 
+						</div>
+					</div>';
 			}
-		echo '</div>';
-
+			echo '</div>';
+			
 	}?>
 		</div>
 	</div>	
