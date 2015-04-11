@@ -157,11 +157,11 @@
 								</div>
 							</div>';
 		}else if($i == 1){
-		 	for ($n = 0; $n<4; $n++){
-		 		$segment5 = array(array(array("Score", 2),array("AC", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
+				 		$segment5 = array(array(array("Score", 2),array("AC", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 					array(array("Score", 2),array("FORT", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 				 	array(array("Score", 2),array("REF", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 				 	array(array("Score", 2),array("WILL", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)));
+		 	for ($n = 0; $n<4; $n++){
 				echo '<div class="row">';
 				for($o=0;$o<9;$o++){
 		                    echo '<div class="col-md-' . $segment5[$n][$o][1] . ' gray">
@@ -211,20 +211,6 @@
 					<h3> SENSES </h3>
 				</div>
 			</div>';
-			echo        '<div class="row">
-							<div class="col-md-3">
-								<h3 class="tiny"> Score </h3>
-							</div>
-							<div class="col-md-3">
-								<h3 class="tiny"> Passive Sense </h3>
-							</div>
-							<div class="col-md-3">
-								<h3 class="tiny"> Base </h3>
-								</div>
-							<div class="col-md-3">
-								<h3 class="tiny"> Skill Bonuses </h3>
-							</div>
-						</div>';
 		$segment7 = array(array(array("Score",3),array("Passive Insight",3),array("Base",3),array("Skill Bonus",3)),
 					array(array("Score",3),array("Passive Perception",3),array("Base",3),array("Skill Bonus",3)));
 			for($q=0;$q<2; $q++){
@@ -232,12 +218,16 @@
 				for($r=0;$r<4;$r++){
 					if($r != 1){
 						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
+								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
 								<h3 class="target-' . $segment7[$q][$r][0] . '"></h3>
 								</div>';
 					}else{
+						if($q!=2){
 						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
 								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
-								</div>';
+								<h3 class="tiny">' . $segment7[$q][$r][0] . '</h3>
+							</div>';
+						}
 					}
 				}
 				echo '</div>';
@@ -260,7 +250,7 @@
 							<select class="form-control" id="feats"></select>
 						</div>
 						<div class="col-md-4">
-		                    <button class="btn btn-default space-fix"> Add </button> 
+		                    <button class="btn btn-default"> Add </button> 
 						</div>
 					</div>';
 			}
