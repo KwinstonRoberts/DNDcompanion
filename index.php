@@ -253,9 +253,8 @@
 				echo '<div class="row"><div class="col-md-12 title gray">
 				<h3> Attack Workspace </h3>
 				</div></div>';
-				$segment8 = array(array(array("Att Bonus", 3),array("", 2),array("1/2 lvl", 1),array("abil", 1),array("class", 1),array("prof", 1),array("Feat", 1),array("ENH", 1),array("misc",1)),
+				$segment8 = array(array("Att Bonus", 3),array("", 2),array("1/2 lvl", 1),array("abil", 1),array("class", 1),array("prof", 1),array("Feat", 1),array("ENH", 1),array("misc",1));
 	
-				 	
 			for ($s = 0; $s<2; $s++){
 				echo '<div class="row">';
 				for($t=0;$t<9;$t++){
