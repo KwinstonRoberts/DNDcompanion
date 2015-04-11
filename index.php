@@ -231,12 +231,12 @@
 				echo '<div class="row">';
 				for($r=0;$r<4;$r++){
 					if($r != 1){
-						echo '<div class="col-md-' . $segment6[$q][$r][1] . ' gray">
-								<h3 class="target-' . $segment6[$q][$r][0] . '"></h3>
+						echo '<div class="col-md-' . $segment7[$q][$r][1] . ' gray">
+								<h3 class="target-' . $segment7[$q][$r][0] . '"></h3>
 								</div>';
 					}else{
-						echo '<div class="col-md-' . $segment6[$q][$p][1] . ' gray">
-								<h3 class="tiny">' . $segment6[$q][$p][0] . '</h3>
+						echo '<div class="col-md-' . $segment7[$q][$p][1] . ' gray">
+								<h3 class="tiny">' . $segment7[$q][$p][0] . '</h3>
 								</div>';
 					}
 				}
