@@ -194,8 +194,7 @@
 					echo '<div class="col-md-' . $segment6[$p][1] . ' gray">
 							<h3 class="tiny">' . $segment6[$p][0] . '</h3>
 							</div>';
-				}
-				
+				}	
 			}
 				echo '</div>';
 				echo '<div class="row">
@@ -252,25 +251,6 @@
 					</div>
 		        	      </div>';
 				echo '</div>';
-				echo '<div class="row">
-		                        <div class="col-md-8">
-		                            <label class="tiny"> Special Movement </label> 
-						<input name="special-movement" class="form-control">
-					</div>
-					<div class="col-md-4">
-		                            <button class="btn btn-default space-fix"> Add </button> 
-					</div>
-		        	      </div>';
-			echo   '<div class="row">
-					   <div class="col-md-12 title gray">
-							<h3> FEATS </h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<select class="form-control" id="feats"></select>
-						</div>
-					</div>';
 					echo   '<div class="row">
 					   <div class="col-md-12 title gray">
 							<h3> FEATS </h3>
