@@ -156,6 +156,48 @@
 									<input type="number" class="form-control target-uses">
 								</div>
 							</div>';
+
+							$segment9 = array('Acrobatics', 'Arcana','Athletics','Bluff','Diplomacy','Dungeoneering','Endurance','Heal','History','Insight','Intimidate','Nature','Perception','Religion','Stealth','Streetwise','Thievery');
+			
+			echo '<div class="row"><div class="col-md-12 title gray">
+				<h3> Skills </h3>
+				</div>
+			      </div>
+			      <div class="row">
+				<div class="col-md-2 gray">
+					<p class="tiny"> Bonus </p>
+				</div>
+				<div class="col-md-2 gray">
+					<p class="tiny "> Skill Name </p>
+				</div>
+				<div class="col-md-2 gray">
+					<p class="tiny "> Abil Mod + 1/2 lvl </p>
+				</div>
+				<div class="col-md-2 gray">
+					<p class="tiny "> Trnd </p>
+				</div>
+				<div class="col-md-2 gray">
+					<p class="tiny "> Armor Penalty </p>
+				</div>
+				<div class="col-md-2 gray">
+					<p class="tiny "> Misc </p>
+				</div>
+			      </div>';
+			for ($u=0;$u<17;$u++){
+				echo '<div class="row">';
+				for ($v=0;$v<6; $v++){
+					if($v = 1){
+						echo '<div class="col-md-' '">';
+						echo '<h4 class="tiny">' . $segment9[$u] . '</h4>
+					</div>';
+					}else{				
+						echo '<div class="col-md-">';
+						echo '<h3 class="target"></h3>
+					</div>';
+						}
+					}
+				echo '</div>';
+			}
 		}else if($i == 1){
 				 		$segment5 = array(array(array("Score", 2),array("AC", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
 					array(array("Score", 2),array("FORT", 3),array("armor", 1),array("lmod", 1),array("class", 1),array("feat", 1),array("ENH", 1),array("misc", 1),array("misc2",1)),
