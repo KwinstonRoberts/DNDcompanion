@@ -173,16 +173,16 @@
 								<input class="form-control" type="text" name="TempHitPoints">
 							</div></div>';
 							echo '<div class="row">
-							<div class="col-md-9">
+							<div class="col-md-6">
 								<h3 class="tiny"> Death Saving Throw Failures </h3>
 							</div>
-							<div class="col-md-1">
+							<div class="col-md-2">
 								<input class="form-control" type="checkbox" name="deathsavingthrow1">
 							</div>
-							<div class="col-md-1">
+							<div class="col-md-2">
 								<input class="form-control" type="checkbox" name="deathsavingthrow2">
 							</div>
-							<div class="col-md-1">
+							<div class="col-md-2">
 								<input class="form-control" type="checkbox" name="deathsavingthrow2">
 							</div>
 						</div>';
