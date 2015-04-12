@@ -90,7 +90,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         mysqli_query($conn, $query);
         }
         for($j=0;$j<count($data2); $j++){
-        $query2 ="UPDATE players SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
+        $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
 		mysqli_query($conn, $query2);
         }
     }
