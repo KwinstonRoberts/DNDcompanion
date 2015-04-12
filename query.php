@@ -40,8 +40,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             $queryPOST = 'SELECT * FROM ability_scores WHERE Character_Name ="' . $name . '"';
             if($result = mysqli_query($conn, $queryPOST)){
                 while($row = mysqli_fetch_row($result)){
-                    $response = $response . "," . $row[0] . "," .  $row[1] . "," . $row[2]
-                    . "," . $row[3] . "," . $row[4] . "," . $row[5];
+                    $response = $response . "," . $row[3] . "," .  $row[4] . "," . $row[5]
+                    . "," . $row[6] . "," . $row[7] . "," . $row[8];
                 }
             }
             echo $response;
