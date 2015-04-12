@@ -82,7 +82,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $charisma = $_POST['charisma'];
 
         $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
-        $data2 = array($character,$strength,$constitution,$dexterity,$intelligance,$wisdom,$charisma);
+        $data2 = array($character,$strength,$constitution,$dexterity,$intelligence,$wisdom,$charisma);
 
         mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
         mysqli_query($conn,"INSERT INTO ability_scores(Player_Name) VAlUES('$name')");
