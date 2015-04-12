@@ -67,12 +67,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $alignment = $_POST['alignment'];
         $diety = $_POST['diety'];
         $company = $_POST['company'];
-        $strength : $_POST['strength'];
-        $constitution : $_POST['constitution'];
-        $dexterity : $_POST['dexterity'];
-        $intelligence : $_POST['intelligence'];
-        $wisdom : $_POST['wisdom'];
-        $charisma : $_POST['charisma'];
+        $strength = $_POST['strength'];
+        $constitution = $_POST['constitution'];
+        $dexterity = $_POST['dexterity'];
+        $intelligence = $_POST['intelligence'];
+        $wisdom = $_POST['wisdom'];
+        $charisma = $_POST['charisma'];
 
         $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
         $data2 = array($character,$strength,$constitution,$dexterity,$intelligance,$wisdom,$charisma);
