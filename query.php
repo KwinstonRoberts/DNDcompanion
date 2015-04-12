@@ -67,20 +67,32 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $alignment = $_POST['alignment'];
         $diety = $_POST['diety'];
         $company = $_POST['company'];
+        $strength : $_POST['strength'],
+        $constitution : $_POST['constitution'],
+        $dexterity : $_POST['dexterity'],
+        $intelligence : $_POST['intelligence'],
+        $wisdom : $_POST['wisdom'],
+        $charisma : $_POST['charisma'],
 
         $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
+        $data2 = array($character,$strength,$constitution,$dexterity,$intelligance,$wisdom,$charisma);
 
         mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
+        mysqli_query($conn,"INSERT INTO ability_scores(Player_Name) VAlUES('$name')");
         $columns = array('Character_Name','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Allignment','Deity','Adventuring_Company');
 
+        $columns2 = array('Character_Name','Strength','Constitution','Dexterity','Intelligence','Wisdom','Charisma');
+
         for ($i=0; $i<count($data); $i++){
        	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Player_Name='$name'";	
-		mysqli_query($conn, $query);
-        $response = $response . $data[$i] . ",";
+        mysqli_query($conn, $query);
         }
-        mysqli_free_result($result);
+        for($j=0;$j<count($data2); $j++){
+        $query2 ="UPDATE players SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
+		mysqli_query($conn, $query2);
+        }
     }
 }
 mysqli_close($conn);

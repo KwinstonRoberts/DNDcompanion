@@ -18,4 +18,11 @@ function updateVar() {
     Char['diety'] = $('[name="Diety"]').val();
     Char['company'] = $('[name="Adventuring_Company"]').val();
     
+
+    STR['base'] = $('[name="StrScore"]').val();
+    CON['base'] = $('[name="ConScore"]').val();
+    DEX['base'] = $('[name="DexScore"]').val();
+    INT['base'] = $('[name="IntScore"]').val();
+    WIS['base'] = $('[name="WisScore"]').val();
+    CHA['base'] = $('[name="ChaScore"]').val();
 }

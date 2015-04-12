@@ -86,6 +86,13 @@ $(document).ready(function(){
                     alignment : Char['alignment'],
                     diety : Char['diety'],
                     company : Char['company'],
+                    
+                    strength : STR['base'],
+                    constitution : CON['base'],
+                    dexterity : DEX['base'],
+                    intelligence : INT['base'],
+                    wisdom : WIS['base'],
+                    charisma : CHA['base'],
                 header: 2},
             success: function(response){
                 console.log(response);
