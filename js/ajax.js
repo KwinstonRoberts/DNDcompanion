@@ -56,7 +56,8 @@ $(document).ready(function(){
                 $('input').prop('disabled',false);
                 var fields = ['Character_Level','Class','Paragon_Path','Epic_Destiny',
                             'Exp','Race','Size','Age','Gender','Height',
-                            'Weight','Alignment','Diety','Adventuring_Company']; 
+                            'Weight','Alignment','Diety','Adventuring_Company','StrScore',
+                            'ConScore','DexScore','IntScore','WisScore','ChaScore']; 
 
                 for(var i=0; i<info.length; i++){
                     $("[name ='" + fields[i] + "']").val(info[i]);
@@ -86,7 +87,7 @@ $(document).ready(function(){
                     alignment : Char['alignment'],
                     diety : Char['diety'],
                     company : Char['company'],
-                    
+
                     strength : STR['base'],
                     constitution : CON['base'],
                     dexterity : DEX['base'],
