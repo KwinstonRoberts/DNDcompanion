@@ -18,7 +18,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $response = "";
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
-	        $response = $response . "," .  $row[2];  
+	        $response = $response . "," .  $row[1];  
 	    }
 	    echo $response;
 	    mysqli_free_result($result);
@@ -28,7 +28,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 }else if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$name = $_POST['name'];
     if($_POST['header']==1){
-    	$queryPOST = 'SELECT * FROM players WHERE Character_Name ="' . $name . '"';
+    	$queryPOST = 'SELECT * FROM players WHERE Character_Name ="' . $character . '"';
     	$response = "";
         if($result = mysqli_query($conn, $queryPOST)){
     	    while($row = mysqli_fetch_row($result)){
