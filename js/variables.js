@@ -8,6 +8,7 @@ var Class = {
     powerType: "",
     surges: 0,
     skills: 0,
+    startingHP: 0,
     defenseBonus: {
         FORT: 0,
         REF: 0,
