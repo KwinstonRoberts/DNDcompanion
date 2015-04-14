@@ -109,7 +109,7 @@ $(document).ready(function(){
                 $('#target-hp').text(names[0]);
                 calculator();
                 }           
-            }
+            });
         });
     });
 });
