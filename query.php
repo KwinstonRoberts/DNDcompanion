@@ -84,8 +84,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
         $data2 = array($character,$strength,$constitution,$dexterity,$intelligence,$wisdom,$charisma);
 
-        mysqli_query($conn,"INSERT INTO players(Character_Name) VAlUES('$character')");
-        mysqli_query($conn,"INSERT INTO ability_scores(Character_Name) VAlUES('$character')");
+        mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
+        mysqli_query($conn,"INSERT INTO ability_scores(Player_Name) VAlUES('$name')");
         $columns = array('Character_Name','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Allignment','Deity','Adventuring_Company');
