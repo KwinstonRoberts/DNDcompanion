@@ -104,11 +104,12 @@ $(document).ready(function(){
                     data:{
                     Class : Char['cclass'], 
                     header: 3},
-            success: function(response){
-                names = response.split(',');
-                $('#target-hp').text(names[0]);
-                calculator();
-                }           
+                    success: function(response){
+                        names = response.split(',');
+                        $('#target-hp').text(names[0]);
+                        calculator();
+                    } 
+                }          
             });
         });
     });
