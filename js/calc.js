@@ -15,7 +15,7 @@ function calculator(){
 		if(j==2){
 			$("#target-DEX").text("" + $('#target-Abil-Mod-' + j).text());
 			$(document.getElementById("target-1/2Lvl")).text("" + Math.floor((Char['level'])/2));
-			$("#target-Score").text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2) + Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2+Math.floor((Char['level']/2)))));
+			$("#target-Score").text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2) + Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2+Math.floor((Char['level']/2))));
 		}
 	}
 }
