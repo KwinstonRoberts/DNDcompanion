@@ -97,7 +97,7 @@ $(document).ready(function(){
                 header: 2},
             success: function(response){
                 console.log(response);
-                calculate();
+                calculator();
             }
         });
     });
