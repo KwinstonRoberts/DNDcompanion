@@ -77,12 +77,12 @@
 	                		<button class="btn btn-default space-fix"> Add </button> 
 				</div>
 		              </div>';
-			$segment4 = array(array(array("StrScore", 3,false),array("STRENGTH", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)),
-				array(array("ConScore", 3,false),array("CONSTITUTION", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)),
-				array(array("DexScore", 3,false),array("DEXTERITY", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)),
-				array(array("IntScore", 3,false),array("INTELLIGENCE", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)),
-				array(array("WisScore", 3,false),array("WISDOM", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)),
-				array(array("ChaScore", 3,false),array("CHARISMA", 3,true),array("Abil Mod", 3,false),array("1/2 Lvl", 3,false)));
+			$segment4 = array(array(array("StrScore", 3,false),array("STRENGTH", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)),
+				array(array("ConScore", 3,false),array("CONSTITUTION", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)),
+				array(array("DexScore", 3,false),array("DEXTERITY", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)),
+				array(array("IntScore", 3,false),array("INTELLIGENCE", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)),
+				array(array("WisScore", 3,false),array("WISDOM", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)),
+				array(array("ChaScore", 3,false),array("CHARISMA", 3,true),array("Abil-Mod", 3,false),array("1/2-Lvl", 3,false)));
 			echo '<div class="row"><div class="col-md-12 title gray">
 				<h3> ABILITY SCORES </h3>
 				</div>
@@ -117,7 +117,7 @@
 						}
 					}else{
 						echo '<div class="col-md-' . $segment4[$m][$l][1] . ' gray">';
-						echo   '<h3 id="target-' . $segment4[$m][$l][0] . '"></h3>
+						echo   '<h3 id="target-' . $segment4[$m][$l][0] . '-' . $m . '"></h3>
 						</div>';
 					}
 				}
@@ -376,6 +376,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/variables.js"></script>
     <script src="js/populate.js"></script>
+    <script src="js/calc.js"></script>
     <script src="js/ajax.js"></script>
     <script type="text/javascript">
     $(function () {
