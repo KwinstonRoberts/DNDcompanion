@@ -97,7 +97,6 @@ $(document).ready(function(){
                     header: 2},
             success: function(response){
                 console.log(response);
-
                 $.ajax({
                     type: 'POST',
                     url: 'query.php',
@@ -105,7 +104,7 @@ $(document).ready(function(){
                     Class : Char['cclass'], 
                     header: 3},
                     success: function(response){
-                        names = response.split(',');
+                        var names = response.split(',');
                         $('#target-hp').text(names[0]);
                         calculator();
                     } 
