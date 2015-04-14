@@ -105,7 +105,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $queryPOST = 'SELECT * FROM class WHERE Name ="' . $class . '"';
         $response ="";
         while($row = mysqli_fetch_row($result)){
-            $response = $response . "," . $row[1] . "," .  $row[2] . "," . $row[3]
+            $response = $response . $row[1] . "," .  $row[2] . "," . $row[3]
             . "," . $row[4] . "," . $row[5] . "," . $row[6]
             . "," . $row[7] . "," . $row[8] . "," . $row[9];
         }
