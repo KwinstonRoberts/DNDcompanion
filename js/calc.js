@@ -3,7 +3,7 @@ function calculator(){
 	for(var i=0; i<exp_milestones.length; i++){
 		if(Char['experience']<exp_milestones[i] && Char['experience']>exp_milestones[i-1]){
 			Char['level']=i+1;
-			$('[name="Character_Level"]').text=="" + (i+1);
+			$('[name="Character_Level"]').text() == Char['level'];
 			break;
 		}
 	}
