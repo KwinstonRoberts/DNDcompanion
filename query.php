@@ -28,14 +28,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 }else if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
 	$name = $_POST['name'];
     if($_POST['header']==1){
-    	$queryPOST = 'SELECT * FROM players WHERE Player_Name ="' . $name . '"';
+    	$queryPOST = 'SELECT * FROM players WHERE Character_Name ="' . $character . '"';
     	$response = "";
         if($result = mysqli_query($conn, $queryPOST)){
     	    while($row = mysqli_fetch_row($result)){
     	        $response = $response . $row[3] . "," . $row[4] . "," . $row[5] 
                 . "," . $row[6] . "," . $row[7] . "," . $row[8] . "," . $row[9]. "," . $row[10]
                 . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14] . "," . $row[15]
-                . "," . $row[16];          
+                . "," . $row[16] or die(mysqli_error($conn));          
             }
             $queryPOST = 'SELECT * FROM ability_scores WHERE Character_Name ="' . $name . '"';
             if($result = mysqli_query($conn, $queryPOST)){
