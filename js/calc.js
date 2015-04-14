@@ -7,7 +7,7 @@ function calculator(){
 			break;
 		} else {
                     Char['level']=i+1;
-                    $('[name="Character_Level")').text(Char['level']);
+                    $('[name="Character_Level"]').text(Char['level']);
                 }
 	}
 	var stats = ['StrScore','ConScore','DexScore','IntScore','WisScore','ChaScore'];
