@@ -10,6 +10,6 @@ function calculator(){
 
 	for (var j=0; j<stats.length; j++){
 		$('#target-Abil-Mod-' + j).text(($('[name="' + stats[j] + '"]').val()-10)/2); 
-		$('#target-1/2-Level-' + j).text(($('[name="' + stats[j] + '"]').val()-10)/2+(Char['level']/2)); 
+		$('#target-1/2-Lvl-' + j).text(($('[name="' + stats[j] + '"]').val()-10)/2+(Char['level']/2)); 
 	}
 }
