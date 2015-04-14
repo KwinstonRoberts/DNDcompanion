@@ -94,14 +94,14 @@ $(document).ready(function(){
                     intelligence : INT['base'],
                     wisdom : WIS['base'],
                     charisma : CHA['base'],
-                header: 2},
+                    header: 2},
             success: function(response){
                 console.log(response);
 
                 $.ajax({
                     type: 'POST',
                     url: 'query.php',
-                    data:{
+                    data: {
                     Class : Char['cclass'], 
                     header: 3},
                     success: function(response){
@@ -109,13 +109,12 @@ $(document).ready(function(){
                         $('#target-hp').text(names[0]);
                         calculator();
                     } 
-                }          
-            });
+                });          
+            }
         });
     });
 });
 // $('#players').click(saveData());
-
 
 /*function saveData(){
     if (n.value !== "") {
