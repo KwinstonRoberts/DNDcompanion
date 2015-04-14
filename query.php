@@ -59,7 +59,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         }else{
             die(mysqli_error($conn));
         }
-    }else{
+    }else if($_POST['header']==2){
         $character = $_POST['character'];
         $class = $_POST['Class'];
         $paragon = $_POST['Paragon'];
@@ -100,6 +100,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
             $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
 		    mysqli_query($conn, $query2);
         }
+    }else{
+        $class = $_POST['Class'];
+        $queryPOST = 'SELECT * FROM class WHERE Name ="' . $class . '"';
+        $response ="";
+        while($row = mysqli_fetch_row($result)){
+            $response = $response . "," . $row[1] . "," .  $row[2] . "," . $row[3]
+            . "," . $row[4] . "," . $row[5] . "," . $row[6]
+            . "," . $row[7] . "," . $row[8] . "," . $row[9];
+        }
+        echo $response;
     }
 }
 mysqli_close($conn);
