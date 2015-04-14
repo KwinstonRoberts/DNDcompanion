@@ -84,8 +84,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $data = array($character,$class,$paragon,$destiny,$exp,$race,$size,$age,$gender,$height,$weight,$alignment,$diety,$company);
         $data2 = array($character,$strength,$constitution,$dexterity,$intelligence,$wisdom,$charisma);
 
-        mysqli_query($conn,"INSERT INTO players(Player_Name) VAlUES('$name')");
-        mysqli_query($conn,"INSERT INTO ability_scores(Player_Name) VAlUES('$name')");
+        mysqli_query($conn,"INSERT INTO players(Character_Name) VAlUES('$character')");
+        mysqli_query($conn,"INSERT INTO ability_scores(Character_Name) VAlUES('$character')");
         $columns = array('Character_Name','Class','Paragon_Path','Epic_Destiny',
                       'Exp','Race','Size','Age','Gender','Height',
                       'Weight','Allignment','Deity','Adventuring_Company');
@@ -93,11 +93,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $columns2 = array('Character_Name','Strength','Constitution','Dexterity','Intelligence','Wisdom','Charisma');
 
         for ($i=0; $i<count($data); $i++){
-           	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Player_Name='$name'";	
+           	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Character_Name='$character'";	
             mysqli_query($conn, $query);
         }
         for($j=0;$j<count($data2); $j++){
-            $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
+            $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Character_Name='$character'";
 		    mysqli_query($conn, $query2);
         }
     }
