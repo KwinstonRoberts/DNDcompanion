@@ -9,7 +9,7 @@ function calculator(){
 	var stats = ['StrScore','ConScore','DexScore','IntScore','WisScore','ChaScore'];
 
 	for (var j=0; j<stats.length; j++){
-		$('#target-Abil-Mod-' + j).text(($('[name="' + stats[j] + '"]').val()-10)/2); 
+		$('#target-Abil-Mod-' + j).text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2)); 
 		//$('#target-1/2-Lvl-' + j).text(($('[name="' + stats[j] + '"]').val()-10)/2+(Char['level']/2)); 
 	}
 }
