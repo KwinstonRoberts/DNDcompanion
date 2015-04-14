@@ -18,7 +18,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $response = "";
     if($result = mysqli_query($conn, $queryPOST)){
 	    while($row = mysqli_fetch_row($result)){
-	        $response = $response . "," .  $row[1];  
+	        $response = $response . "," .  $row[0];  
 	    }
 	    echo $response;
 	    mysqli_free_result($result);
@@ -32,16 +32,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     	$response = "";
         if($result = mysqli_query($conn, $queryPOST)){
     	    while($row = mysqli_fetch_row($result)){
-    	        $response = $response . $row[3] . "," . $row[4] . "," . $row[5] 
-                . "," . $row[6] . "," . $row[7] . "," . $row[8] . "," . $row[9]. "," . $row[10]
-                . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14] . "," . $row[15]
-                . "," . $row[16];          
+    	        $response = $response . $row[2] . "," . $row[3] . "," . $row[4] 
+                . "," . $row[5] . "," . $row[6] . "," . $row[7] . "," . $row[8]. "," . $row[9]
+                . "," . $row[10] . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14]
+                . "," . $row[15];          
             }
             $queryPOST = 'SELECT * FROM ability_scores WHERE Character_Name ="' . $name . '"';
             if($result = mysqli_query($conn, $queryPOST)){
                 while($row = mysqli_fetch_row($result)){
-                    $response = $response . "," . $row[3] . "," .  $row[4] . "," . $row[5]
-                    . "," . $row[6] . "," . $row[7] . "," . $row[8];
+                    $response = $response . "," . $row[2] . "," .  $row[3] . "," . $row[4]
+                    . "," . $row[5] . "," . $row[6] . "," . $row[7];
                 }
             }
             echo $response;
@@ -52,7 +52,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $response = "";
         if($result = mysqli_query($conn, $queryPOST)){
             while($row = mysqli_fetch_row($result)){
-                    $response = $response . $row[2] . ",";  
+                    $response = $response . $row[1] . ",";  
                 echo $response;
                 mysqli_free_result($result);
             }
@@ -93,11 +93,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
         $columns2 = array('Character_Name','Strength','Constitution','Dexterity','Intelligence','Wisdom','Charisma');
 
         for ($i=0; $i<count($data); $i++){
-           	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Character_Name='$character'";	
+           	$query = "UPDATE players SET $columns[$i]='$data[$i]' WHERE Player_Name='$name'";	
             mysqli_query($conn, $query);
         }
         for($j=0;$j<count($data2); $j++){
-            $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Character_Name='$character'";
+            $query2 ="UPDATE ability_scores SET $columns2[$j]='$data2[$j]' WHERE Player_Name='$name'";
 		    mysqli_query($conn, $query2);
         }
     }
