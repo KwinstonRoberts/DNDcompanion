@@ -32,16 +32,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     	$response = "";
         if($result = mysqli_query($conn, $queryPOST)){
     	    while($row = mysqli_fetch_row($result)){
-    	        $response = $response . $row[2] . "," . $row[3] . "," . $row[4] 
-                . "," . $row[5] . "," . $row[6] . "," . $row[7] . "," . $row[8]. "," . $row[9]
-                . "," . $row[10] . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14]
-                . "," . $row[15];          
+    	        $response = $response . $row[3] . "," . $row[4] . "," . $row[5] 
+                . "," . $row[6] . "," . $row[7] . "," . $row[8] . "," . $row[9]. "," . $row[10]
+                . "," . $row[11] . "," . $row[12] . "," . $row[13] . "," . $row[14] . "," . $row[15]
+                . "," . $row[16];          
             }
             $queryPOST = 'SELECT * FROM ability_scores WHERE Character_Name ="' . $name . '"';
             if($result = mysqli_query($conn, $queryPOST)){
                 while($row = mysqli_fetch_row($result)){
-                    $response = $response . "," . $row[2] . "," .  $row[3] . "," . $row[4]
-                    . "," . $row[5] . "," . $row[6] . "," . $row[7];
+                    $response = $response . "," . $row[3] . "," .  $row[4] . "," . $row[5]
+                    . "," . $row[6] . "," . $row[7] . "," . $row[8];
                 }
             }
             echo $response;
