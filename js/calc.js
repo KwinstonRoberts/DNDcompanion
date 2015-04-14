@@ -11,6 +11,6 @@ function calculator(){
 
 	for (var j=0; j<stats.length; j++){
 		$('#target-Abil-Mod-' + j).text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2)); 
-		$(document.getElementById('target-1/2Lvl-' + j)).text(Math.floor(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2+(Char['level']/2)))); 
+		$(document.getElementById('target-1/2Lvl-' + j)).text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2+Math.floor((Char['level']/2)))); 
 	}
 }
