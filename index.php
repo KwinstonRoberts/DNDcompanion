@@ -117,7 +117,7 @@
 						}
 					}else{
 						echo '<div class="col-md-' . $segment4[$m][$l][1] . ' gray">';
-						echo   '<h3 id="target-' . $segment4[$m][$l][0] . '-' . $m . '"></h3>
+						echo   '<h4 id="target-' . $segment4[$m][$l][0] . '-' . $m . '"></h3>
 						</div>';
 					}
 				}
