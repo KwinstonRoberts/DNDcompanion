@@ -13,8 +13,8 @@ function calculator(){
 		$('#target-Abil-Mod-' + j).text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2)); 
 		$(document.getElementById('target-1/2Lvl-' + j)).text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2+Math.floor((Char['level']/2)))); 
 		if(j==2){
-			$("#target-score").text("" + $('#target-Abil-Mod-' + j).text());
-			$("#target-score").text("" + Math.floor((Char['level'])/2));
+			$("#target-DEX").text("" + $('#target-Abil-Mod-' + j).text());
+			$("#target-1/2Lvl").text("" + Math.floor((Char['level'])/2));
 		}
 	}
 }
