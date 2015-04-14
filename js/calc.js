@@ -6,7 +6,7 @@ function calculator(){
 			$('[name="Character_Level"]').text(Char['level']);
 			break;
 		} else {
-                    Char['level']=i+1;
+                    Char['level']=1;
                     $('[name="Character_Level"]').text(Char['level']);
                 }
 	}
