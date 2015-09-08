@@ -40,7 +40,7 @@ function calculator(){
 	val = val + (Math.floor((con-10)/2));
 	$('.target-HP').text(hp);
 	$('.target-bloodied').text(Math.floor(hp/2));
-	$('.target-surge').text(Math.floor(bloodied/2));
+	$('.target-surge').text(Math.floor(hp/2/2));
 	$('.target-surgeperday').text(val);
-	$('.target-currenthp').value(hp);
+	$('.target-currenthp').value = hp;
 }
