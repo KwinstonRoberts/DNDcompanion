@@ -42,5 +42,5 @@ function calculator(){
 	$('.target-bloodied').text(Math.floor(hp/2));
 	$('.target-surge').text(Math.floor(hp/2/2));
 	$('.target-surgeperday').text(val);
-	$('.target-currenthp').value = hp;
+	$('.form-control target-current').value = hp;
 }
