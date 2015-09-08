@@ -30,6 +30,7 @@ function calculator(){
             }
         } 
     }
+	console.log(lvlhp);
 	var con = document.getElementById(stats[2]).value;
 	var num1 = parseInt(con);
 	var hp = num1 + 15 + lvlhp;
