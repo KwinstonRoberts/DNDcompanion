@@ -23,17 +23,17 @@ function calculator(){
 	}
 	//this is the start of the hp calculations
 	var lvlhp = 0;
+	var base = 0;
 	if(Char['level'] > 1){
         for(var x=0; x < Char['level'] - 1; x++){
 			if(Char['cclass'] == "Fighter"){
 				lvlhp += 6;
-				console.log("yes");
+				base = 15;
             }
         } 
     }
-	console.log(lvlhp);
-	var con = document.getElementById(stats[2]).value;
+	var con = document.getElementById(stats[1]).value;
 	var num1 = parseInt(con);
-	var hp = num1 + 15 + lvlhp;
+	var hp = num1 + base + lvlhp;
 	$('.target-HP').text(hp);
 }
