@@ -37,11 +37,10 @@ function calculator(){
 	var con = document.getElementById(stats[1]).value;
 	var num1 = parseInt(con);
 	var hp = num1 + base + lvlhp;
-	var bloodied = Math.floor(hp/2);
-	var surge = Math.floor(bloodied/2);
 	val = val + (Math.floor((con-10)/2));
 	$('.target-HP').text(hp);
 	$('.target-bloodied').text(Math.floor(hp/2));
 	$('.target-surge').text(Math.floor(bloodied/2));
 	$('.target-surgeperday').text(val);
+	$('.target-currenthp').value(hp);
 }
