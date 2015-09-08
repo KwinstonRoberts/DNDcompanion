@@ -21,6 +21,7 @@ function calculator(){
 			$("#target-Score").text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2)+Math.floor((Char['level']/2)));
 		}
 	}
+	//this is the start of the hp calculations
 	var lvlhp = 0;
 	
 	if($('[name="Class"]').value == "Fighter"){
@@ -29,6 +30,6 @@ function calculator(){
 				lvlhp += 6;
             }
         } 
-		$('#target-HP').text($stats[2] + lvlhp + 15);
+		$('#target-HP').text(22);
     }
 }
