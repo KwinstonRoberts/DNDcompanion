@@ -30,6 +30,6 @@ function calculator(){
 				lvlhp += 6;
             }
         } 
-		$('#target-HP').text(22);
+		$('.target-HP').text(22);
     }
 }
