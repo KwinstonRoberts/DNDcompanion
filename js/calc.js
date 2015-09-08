@@ -30,5 +30,7 @@ function calculator(){
             }
         } 
     }
-	$('.target-HP').text(parseInt(stats[2]) + 15 + parseInt(lvlhp));
+	var num1 = parseInt(stats[1]);
+	var num2 = parseInt(lvlhp);
+	$('.target-HP').text(num1 + 15 + num2);
 }
