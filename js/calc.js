@@ -29,6 +29,6 @@ function calculator(){
 				lvlhp += 6;
             }
         } 
-		$('.target-HP').text(parseInt(stat[2]) + 15 + parseInt(lvlhp));
     }
+	$('.target-HP').text(parseInt(stats[2]) + 15 + parseInt(lvlhp));
 }
