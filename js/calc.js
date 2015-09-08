@@ -24,16 +24,24 @@ function calculator(){
 	//this is the start of the hp calculations
 	var lvlhp = 0;
 	var base = 0;
+	var val = 0;
 	if(Char['level'] > 1){
         for(var x=0; x < Char['level'] - 1; x++){
 			if(Char['cclass'] == "Fighter"){
 				lvlhp += 6;
 				base = 15;
+				val = 9;
             }
         } 
     }
 	var con = document.getElementById(stats[1]).value;
 	var num1 = parseInt(con);
 	var hp = num1 + base + lvlhp;
+	var bloodied = Math.floor(hp/2);
+	var surge = Math.floor(bloodied/2);
+	val = val + (Math.floor((con-10)/2));
 	$('.target-HP').text(hp);
+	$('.target-bloodied').text(bloodied);
+	$('.target-surge').text(surge);
+	$('.target-surgeperday').text(val);
 }
