@@ -6,9 +6,9 @@ function calculator(){
 			$('[name="Character_Level"]').text(Char['level']);
 			break;
 		} else {
-                    Char['level']=1;
-                    $('[name="Character_Level"]').text(Char['level']);
-                }
+            Char['level']=1;
+            $('[name="Character_Level"]').text(Char['level']);
+        }
 	}
 	var stats = ['StrScore','ConScore','DexScore','IntScore','WisScore','ChaScore'];
 
@@ -21,4 +21,14 @@ function calculator(){
 			$("#target-Score").text(Math.floor(($('[name="' + stats[j] + '"]').val()-10)/2)+Math.floor((Char['level']/2)));
 		}
 	}
+	var lvlhp = 0;
+	
+	if($('[name="Class"]').value == "Fighter"){
+		if(Char['level'] > 1){
+           for(var x=0; x < Char['level'] - 1; x++){
+				lvlhp += 6;
+            }
+        } 
+		$('#target-HP').text($stats[2] + lvlhp + 15);
+    }
 }
