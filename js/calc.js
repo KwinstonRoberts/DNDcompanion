@@ -27,6 +27,7 @@ function calculator(){
 		if(Char['level'] > 1){
            for(var x=0; x < Char['level'] - 1; x++){
 				lvlhp += 6;
+				console.log("yes");
             }
         } 
     }
