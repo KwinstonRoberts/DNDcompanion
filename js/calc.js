@@ -30,8 +30,8 @@ function calculator(){
             }
         } 
     }
-	var num1 = parseInt(stats[1]);
-	var num2 = parseInt(lvlhp);
-	var hp = num1 + 15 + num2;
+	var con = document.getElementById(stats[2]).value;
+	var num1 = parseInt(con);
+	var hp = num1 + 15 + lvlhp;
 	$('.target-HP').text(hp);
 }

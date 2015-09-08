@@ -112,7 +112,7 @@
 							</div>';
 						}else{				
 							echo '<div class="col-md-' . $segment4[$m][$l][1] . '">';
-							echo '<input type="number" name="' . $segment4[$m][$l][0] . '" class="form-control">
+							echo '<input type="number" id="' . $segment4[$m][$l][0] . '" name="' . $segment4[$m][$l][0] . '" class="form-control">
 							</div>';
 						}
 					}else{
