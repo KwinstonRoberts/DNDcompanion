@@ -32,5 +32,6 @@ function calculator(){
     }
 	var num1 = parseInt(stats[1]);
 	var num2 = parseInt(lvlhp);
-	$('.target-HP').text(num1 + 15 + num2);
+	var hp = num1 + 15 + num2
+	$('.target-HP').text(hp);
 }
