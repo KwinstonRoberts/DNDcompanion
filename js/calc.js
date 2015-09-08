@@ -23,9 +23,9 @@ function calculator(){
 	}
 	//this is the start of the hp calculations
 	var lvlhp = 0;
-	if($('[name="Class"]').value == "Fighter"){
-		if(Char['level'] > 1){
-           for(var x=0; x < Char['level'] - 1; x++){
+	if(Char['level'] > 1){
+        for(var x=0; x < Char['level'] - 1; x++){
+			if(Char['cclass'] == "Fighter"){
 				lvlhp += 6;
 				console.log("yes");
             }
