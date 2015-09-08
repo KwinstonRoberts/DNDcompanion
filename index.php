@@ -149,11 +149,11 @@
 							<div class="row">
 								<div class="col-md-5">
 									<h3 class="tiny">Current Hit Points</h3>
-									<input type="number" class="form-control target-current">
+									<input type="number" name="target-currenthp" class="form-control target-current">
 								</div>
 								<div class="col-md-5">
 									<h3 class="tiny">Current Surge Uses</h3>
-									<input type="number" class="form-control target-uses">
+									<input type="number" name="target-currentsurges" class="form-control target-uses">
 								</div>
 							</div>';
 							echo '<div class="row">
