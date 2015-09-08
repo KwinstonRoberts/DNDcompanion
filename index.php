@@ -131,7 +131,7 @@
 							<div class="row">
 								<div class="col-md-3">
 									<h3 class="tiny"> MAX HP </h3>
-									<h3 class="target-HP"></h3>
+									<h3 id="target-HP"></h3>
 								</div>
 								<div class="col-md-3">
 									<h3 class="tiny"> Bloodied </h3>
