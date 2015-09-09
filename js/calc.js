@@ -27,12 +27,100 @@ function calculator(){
 	var val = 0;
 	if(Char['level'] > 1){
         for(var x=0; x < Char['level'] - 1; x++){
-			if(Char['cclass'] == "Fighter"){
+			if(Char['cclass'] == "Cleric"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Fighter"){
 				lvlhp += 6;
 				base = 15;
 				val = 9;
-            }
-        } 
+            } else if(Char['cclass'] == "Paladin"){
+				lvlhp += 6;
+				base = 15;
+				val = 10;
+			} else if(Char['cclass'] == "Ranger"){
+				lvlhp += 5;
+				base = 12;
+				val = 6;
+			} else if(Char['cclass'] == "Rogue"){
+				lvlhp += 5;
+				base = 12;
+				val = 6;
+			} else if(Char['cclass'] == "Warlock"){
+				lvlhp += 5;
+				base = 12;
+				val = 6;
+			} else if(Char['cclass'] == "Warlord"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Wizard"){
+				lvlhp += 4;
+				base = 10;
+				val = 6;
+			} else if(Char['cclass'] == "Avenger"){
+				lvlhp += 6;
+				base = 14;
+				val = 7;
+			} else if(Char['cclass'] == "Barbarian"){
+				lvlhp += 6;
+				base = 15;
+				val = 8;
+			} else if(Char['cclass'] == "Bard"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Druid"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Invoker"){
+				lvlhp += 4;
+				base = 10;
+				val = 0;
+			} else if(Char['cclass'] == "Shaman"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Sorcerer"){
+				lvlhp += 5;
+				base = 12;
+				val = 6;
+			} else if(Char['cclass'] == "Warden"){
+				lvlhp += 7;
+				base = 17;
+				val = 9;
+			} else if(Char['cclass'] == "Ardent"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Battlemind"){
+				lvlhp += 6;
+				base = 15;
+				val = 9;
+			} else if(Char['cclass'] == "Monk"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Psion"){
+				lvlhp += 4;
+				base = 12;
+				val = 6;
+			} else if(Char['cclass'] == "Runepriest"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else if(Char['cclass'] == "Seeker"){
+				lvlhp += 5;
+				base = 12;
+				val = 7;
+			} else {
+				lvlhp += 1;
+				base = 1;
+				val = 1;
+			}
+        }  
     }
 	var con = document.getElementById(stats[1]).value;
 	var num1 = parseInt(con);
@@ -42,5 +130,4 @@ function calculator(){
 	$('.target-bloodied').text(Math.floor(hp/2));
 	$('.target-surge').text(Math.floor(hp/2/2));
 	$('.target-surgeperday').text(val);
-	$('.form-control target-current').value(hp);
 }
