@@ -137,6 +137,6 @@ function calculator(){
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	
 	for(var x=0; x > 4; x++){
-		$('.target-'+ defs[x]).text(10 + (Math.floor(Char['level']/2)));
+		$('#target-'+ defs[x]).text(10 + (Math.floor(Char['level']/2)));
 	}
 }
