@@ -120,8 +120,9 @@ function calculator(){
 				base = 1;
 				val = 1;
 			}
-        }  
+        }
     }
+	
 	var con = document.getElementById(stats[1]).value;
 	var num1 = parseInt(con);
 	var hp = num1 + base + lvlhp;
@@ -136,6 +137,6 @@ function calculator(){
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	
 	for(var x=0; x > 4; x++){
-		$('target-'+ defs[x] + ).text(10 + (Math.floor(Char['level']/2));
+		$('target-'+ defs[x] + ).text(10 + (Math.floor(Char['level']/2)));
 	}
 }
