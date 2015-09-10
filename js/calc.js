@@ -224,7 +224,7 @@ function calculator(){
 		$(document.getElementById("target-" + defs[x] + x)).text(10 + (Math.floor(Char['level']/2)));
 		$(document.getElementById("target-class" + x)).text(classScore[x]);
 		$(document.getElementById("target-armor" + x)).text(defArmor[x]);
-		$(document.getElementById("target-score" + x)).text(10 + (Math.floor(Char['level']/2)) +
+		$(document.getElementById("target-Score" + x)).text(10 + (Math.floor(Char['level']/2)) +
 			classScore[x] + defArmor[x] + featBonux[x] + enchantBonus[x] + miscBonus[x] + misc2Bonus[x])
 	}	
 }
