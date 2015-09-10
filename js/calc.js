@@ -221,7 +221,7 @@ function calculator(){
 	}
 	
 	for(var x=0; x < 4; x++){
-		$(document.getElementById("target-lmod" x)).text(10 + (Math.floor(Char['level']/2)));
+		$(document.getElementById("target-lmod" + x)).text(10 + (Math.floor(Char['level']/2)));
 		$(document.getElementById("target-class" + x)).text(classScore[x]);
 		$(document.getElementById("target-armor" + x)).text(defArmor[x]);
 		$(document.getElementById("target-Score" + x)).text(10 + (Math.floor(Char['level']/2)) +
