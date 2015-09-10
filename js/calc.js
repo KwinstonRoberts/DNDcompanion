@@ -130,4 +130,11 @@ function calculator(){
 	$('.target-bloodied').text(Math.floor(hp/2));
 	$('.target-surge').text(Math.floor(hp/2/2));
 	$('.target-surgeperday').text(val);
+	
+	//Defenses calculations
+	var defs = {"AC", "FORT", "REF", "WILL"};
+	
+	for(var x=0; x > 4; x++){
+		$('target-'. defs[x] . '').text(10 + (Math.floor(Char['level']/2))
+	}
 }
