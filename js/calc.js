@@ -141,10 +141,7 @@ function calculator(){
 	//Forgot semi collon
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	var classScore = [0,0,0,0];
-	var AC = 0;
-	var FORT = 0;
-	var REF = 0;
-	var WILL = 0;
+	var defArmor = [0,0,0,0];
 	
 	if(Char['cclass'] == "Cleric"){
 		classScore = [0,0,0,2];
@@ -195,36 +192,32 @@ function calculator(){
 	}
 	
 	if(parseInt(dex) > parseInt(intel)){
-		AC = Math.floor((parseInt(dex) - 10) / 2);
+		defArmor[0] = Math.floor((parseInt(dex) - 10) / 2);
 	} else {
-		AC = Math.floor((parseInt(intel) - 10) / 2);
+		defArmor[0] = Math.floor((parseInt(intel) - 10) / 2);
 	}
 	
 	if(parseInt(str) > parseInt(con)){
-		FORT = Math.floor((parseInt(str) - 10) / 2);
+		defArmor[1] = Math.floor((parseInt(str) - 10) / 2);
 	} else {
-		FORT = Math.floor((parseInt(con) - 10) / 2);
+		defArmor[1] = Math.floor((parseInt(con) - 10) / 2);
 	}
 	
 	if(parseInt(dex) > parseInt(intel)){
-		REF = Math.floor((parseInt(dex) - 10) / 2);
+		defArmor[2] = Math.floor((parseInt(dex) - 10) / 2);
 	} else {
-		REF = Math.floor((parseInt(intel) - 10) / 2);
+		defArmor[2] = Math.floor((parseInt(intel) - 10) / 2);
 	}
 	
 	if(parseInt(wis) > parseInt(cha)){
-		WILL = Math.floor((parseInt(wis) - 10) / 2);
+		defArmor[3] = Math.floor((parseInt(wis) - 10) / 2);
 	} else {
-		WILL = Math.floor((parseInt(cha) - 10) / 2);
+		defArmor[3] = Math.floor((parseInt(cha) - 10) / 2);
 	}
 	
 	for(var x=0; x < 4; x++){
 		$(document.getElementById("target-" + defs[x] + x)).text(10 + (Math.floor(Char['level']/2)));
 		$(document.getElementById("target-class" + x)).text(classScore[x]);
-	}
-	$(document.getElementById("target-armor0")).text(AC);
-	$(document.getElementById("target-armor1")).text(FORT);
-	$(document.getElementById("target-armor2")).text(REF);
-	$(document.getElementById("target-armor3")).text(WILL);	
-	
+		$(document.getElementById("target-armor" + x)).text(defArmor[x]);
+	}	
 }
