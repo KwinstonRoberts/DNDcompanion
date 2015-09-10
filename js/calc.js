@@ -195,27 +195,27 @@ function calculator(){
 	}
 	
 	if(parseInt(dex) > parseInt(intel)){
-		AC = (parseInt(dex) - 10) / 2;
+		AC = Math.floor((parseInt(dex) - 10) / 2);
 	} else {
-		AC = (parseInt(intel) - 10) / 2;
+		AC = Math.floor((parseInt(intel) - 10) / 2);
 	}
 	
 	if(parseInt(str) > parseInt(con)){
-		FORT = (parseInt(str) - 10) / 2;
+		FORT = Math.floor((parseInt(str) - 10) / 2);
 	} else {
-		FORT = (parseInt(con) - 10) / 2;
+		FORT = Math.floor((parseInt(con) - 10) / 2);
 	}
 	
 	if(parseInt(dex) > parseInt(intel)){
-		REF = (parseInt(dex) - 10) / 2;
+		REF = Math.floor((parseInt(dex) - 10) / 2);
 	} else {
-		REF = (parseInt(intel) - 10) / 2;
+		REF = Math.floor((parseInt(intel) - 10) / 2);
 	}
 	
 	if(parseInt(wis) > parseInt(cha)){
-		WILL = (parseInt(wis) - 10) / 2;
+		WILL = Math.floor((parseInt(wis) - 10) / 2);
 	} else {
-		WILL = (parseInt(cha) - 10) / 2;
+		WILL = Math.floor((parseInt(cha) - 10) / 2);
 	}
 	
 	for(var x=0; x < 4; x++){
