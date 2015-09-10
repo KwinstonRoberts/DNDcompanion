@@ -131,10 +131,11 @@ function calculator(){
 	$('.target-surge').text(Math.floor(hp/2/2));
 	$('.target-surgeperday').text(val);
 	
-	//Defenses calculations
+	//Defenses calculations 
+	//Forgot semi collon
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	
 	for(var x=0; x > 4; x++){
-		$('target-'+ defs[x] + ).text(10 + (Math.floor(Char['level']/2))
+		$('target-'+ defs[x] + ).text(10 + (Math.floor(Char['level']/2));
 	}
 }
