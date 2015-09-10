@@ -242,7 +242,7 @@
 				for($o=0;$o<9;$o++){
 		                    echo '<div class="col-md-' . $segment5[$n][$o][1] . ' gray">
 		                		<label class="tiny">' . $segment5[$n][$o][0] . '</label>
-		                                <h3 id="target-' . $segment5[$n][$o][0] . '"></h3>
+		                                <h3 id="target-' . $segment5[$n][$o][0] . $n'"></h3>
 					  </div>';
 				}
 				echo  '</div>';
