@@ -146,6 +146,7 @@ function calculator(){
 	var enchantBonus = [0,0,0,0];
 	var miscBonus = [0,0,0,0];
 	var misc2Bonus = [0,0,0,0];
+	var moveBase = 0;
 	
 	
 	if(Char['cclass'] == "Cleric"){
@@ -227,4 +228,44 @@ function calculator(){
 		$(document.getElementById("target-Score" + x)).text(10 + (Math.floor(Char['level']/2)) +
 			classScore[x] + defArmor[x] + featBonus[x] + enchantBonus[x] + miscBonus[x] + misc2Bonus[x])
 	}	
+	
+	//Movement
+	
+	if(Char['race'] == "Dragonborn"){
+		moveBase = 6;
+	} else if (Char['race'] == "Dwarf"){
+		moveBase = 5;
+	} else if (Char['race'] == "Eladrin"){
+		moveBase = 6;
+	} else if (Char['race'] == "Elf"){
+		moveBase = 7;
+	} else if (Char['race'] == "Half-Elf"){
+		moveBase = 6;
+	} else if (Char['race'] == "Halfling"){
+		moveBase = 6;
+	} else if (Char['race'] == "Human"){
+		moveBase = 6;
+	} else if (Char['race'] == "Tiefling"){
+		moveBase = 6;
+	} else if (Char['race'] == "Deva"){
+		moveBase = 6;
+	} else if (Char['race'] == "Gnome"){
+		moveBase = 5;
+	} else if (Char['race'] == "Goliath"){
+		moveBase = 6;
+	} else if (Char['race'] == "Half-Orc"){
+		moveBase = 6;
+	} else if (Char['race'] == "Shifter"){
+		moveBase = 6;
+	} else if (Char['race'] == "Githzerai"){
+		moveBase = 6;
+	} else if (Char['race'] == "Minotaur"){
+		moveBase = 6;
+	} else if (Char['race'] == "Shardmind"){
+		moveBase = 6;
+	} else if (Char['race'] == "Wilden"){
+		moveBase = 6;
+	} 
+	$(document.getElementById("target-Base").text(moveBase);
+	
 }
