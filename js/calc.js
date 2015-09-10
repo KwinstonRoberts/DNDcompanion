@@ -266,6 +266,6 @@ function calculator(){
 	} else if (Char['race'] == "Wilden"){
 		moveBase = 6;
 	} 
-	$(document.getElementById("target-Base").text(moveBase);
+	$(document.getElementById("target-Base")).text(moveBase);
 	
 }
