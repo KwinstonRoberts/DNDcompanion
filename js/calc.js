@@ -136,7 +136,7 @@ function calculator(){
 	//Forgot semi collon
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	
-	for(var x=0; x > 4; x++){
-		$('#target-'+ defs[x]).text(10 + (Math.floor(Char['level']/2)));
-	}
+	//for(var x=0; x > 4; x++){
+		$(document.getElementById("target-AC")).text(10 + (Math.floor(Char['level']/2)));
+	//}
 }
