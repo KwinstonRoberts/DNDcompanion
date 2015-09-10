@@ -123,7 +123,12 @@ function calculator(){
         }
     }
 	
+	var str = document.getElementById(stats[0]).value;
 	var con = document.getElementById(stats[1]).value;
+	var dex = document.getElementById(stats[2]).value;
+	var intel = document.getElementById(stats[3]).value;
+	var wis = document.getElementById(stats[4]).value;
+	var cha = document.getElementById(stats[5]).value;
 	var num1 = parseInt(con);
 	var hp = num1 + base + lvlhp;
 	val = val + (Math.floor((con-10)/2));
@@ -189,8 +194,37 @@ function calculator(){
 		classScore = [0,0,0,0];
 	}
 	
+	if(parseInt(dex) > parseInt(intel)){
+		AC = (parseInt(dex) - 10) / 2;
+	} else {
+		AC = (parseInt(intel) - 10) / 2;
+	}
+	
+	if(parseInt(str) > parseInt(con)){
+		FORT = (parseInt(str) - 10) / 2;
+	} else {
+		FORT = (parseInt(con) - 10) / 2;
+	}
+	
+	if(parseInt(dex) > parseInt(intel)){
+		REF = (parseInt(dex) - 10) / 2;
+	} else {
+		REF = (parseInt(intel) - 10) / 2;
+	}
+	
+	if(parseInt(wis) > parseInt(cha)){
+		WILL = (parseInt(wis) - 10) / 2;
+	} else {
+		WILL = (parseInt(cha) - 10) / 2;
+	}
+	
 	for(var x=0; x < 4; x++){
 		$(document.getElementById("target-" + defs[x] + x)).text(10 + (Math.floor(Char['level']/2)));
 		$(document.getElementById("target-class" + x)).text(classScore[x]);
 	}
+	$(document.getElementById("target-armor0")).text(AC);
+	$(document.getElementById("target-armor1")).text(FORT);
+	$(document.getElementById("target-armor2")).text(REF);
+	$(document.getElementById("target-armor3")).text(WILL);	
+	
 }
