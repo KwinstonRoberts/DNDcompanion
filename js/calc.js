@@ -135,8 +135,62 @@ function calculator(){
 	//Defenses calculations 
 	//Forgot semi collon
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
+	var classScore = [0,0,0,0];
+	var AC = 0;
+	var FORT = 0;
+	var REF = 0;
+	var WILL = 0;
+	
+	if(Char['cclass'] == "Cleric"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Fighter"){
+		classScore = [0,2,0,0];
+    } else if(Char['cclass'] == "Paladin"){
+		classScore = [0,1,1,1];
+	} else if(Char['cclass'] == "Ranger"){
+		classScore = [0,1,1,0];
+	} else if(Char['cclass'] == "Rogue"){
+		classScore = [0,0,2,0];
+	} else if(Char['cclass'] == "Warlock"){
+		classScore = [0,1,1,0];
+	} else if(Char['cclass'] == "Warlord"){
+		classScore = [0,1,1,0];
+	} else if(Char['cclass'] == "Wizard"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Avenger"){
+		classScore = [0,1,1,1];
+	} else if(Char['cclass'] == "Barbarian"){
+		classScore = [0,2,0,0];
+	} else if(Char['cclass'] == "Bard"){
+		classScore = [0,0,1,1];
+	} else if(Char['cclass'] == "Druid"){
+		classScore = [0,1,0,1];
+	} else if(Char['cclass'] == "Invoker"){
+		classScore = [0,1,1,1];
+	} else if(Char['cclass'] == "Shaman"){
+		classScore = [0,1,0,1];
+	} else if(Char['cclass'] == "Sorcerer"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Warden"){
+		classScore = [0,1,0,1];
+	} else if(Char['cclass'] == "Ardent"){
+		classScore = [0,1,0,1];
+	} else if(Char['cclass'] == "Battlemind"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Monk"){
+		classScore = [0,1,1,1];
+	} else if(Char['cclass'] == "Psion"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Runepriest"){
+		classScore = [0,0,0,2];
+	} else if(Char['cclass'] == "Seeker"){
+		classScore = [0,1,0,1];
+	} else {
+		classScore = [0,0,0,0];
+	}
 	
 	for(var x=0; x < 4; x++){
-		$(document.getElementById("target-" + defs[x])).text(10 + (Math.floor(Char['level']/2)));
+		$(document.getElementById("target-" + defs[x] + x)).text(10 + (Math.floor(Char['level']/2)));
+		$(document.getElementById("target-class" + x)).text(classScore[x]);
 	}
 }
