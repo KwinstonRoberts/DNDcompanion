@@ -269,6 +269,6 @@ function calculator(){
 		moveBase = 0;
 	}
 	
-	$(document.getElementById(".target-Base")).text(moveBase);
+	$(document.getElementById("#target-Base")).text(moveBase);
 	
 }
