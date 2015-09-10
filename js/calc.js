@@ -265,7 +265,10 @@ function calculator(){
 		moveBase = 6;
 	} else if (Char['race'] == "Wilden"){
 		moveBase = 6;
-	} 
-	$(document.getElementById("target-Base")).text(moveBase);
+	} else {
+		moveBase = 0;
+	}
+	
+	$(document.getElementById(".target-Base")).text(moveBase);
 	
 }
