@@ -142,6 +142,11 @@ function calculator(){
 	var defs = ['AC', 'FORT', 'REF', 'WILL'];
 	var classScore = [0,0,0,0];
 	var defArmor = [0,0,0,0];
+	var featBonus = [0,0,0,0];
+	var enchantBonus = [0,0,0,0];
+	var miscBonus = [0,0,0,0];
+	var misc2Bonus = [0,0,0,0];
+	
 	
 	if(Char['cclass'] == "Cleric"){
 		classScore = [0,0,0,2];
@@ -219,5 +224,7 @@ function calculator(){
 		$(document.getElementById("target-" + defs[x] + x)).text(10 + (Math.floor(Char['level']/2)));
 		$(document.getElementById("target-class" + x)).text(classScore[x]);
 		$(document.getElementById("target-armor" + x)).text(defArmor[x]);
+		$(document.getElementById("target-score" + x)).text(10 + (Math.floor(Char['level']/2)) +
+			classScore[x] + defArmor[x] + featBonux[x] + enchantBonus[x] + miscBonus[x] + misc2Bonus[x])
 	}	
 }
