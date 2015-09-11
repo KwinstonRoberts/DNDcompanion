@@ -270,5 +270,6 @@ function calculator(){
 	}
 	
 	$(".target-Base").text(moveBase);
+	$(".target-SpeedScore").text(moveBase);
 	
 }

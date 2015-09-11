@@ -259,7 +259,7 @@
 		        	      </div>';
 		    	}
 		}else{
-			$segment6 = array(array("Score",2,),array("Speed",5),array("Base",2),array("Armor",1),array("Item",1),array("Misc",1));
+			$segment6 = array(array("SpeedScore",2,),array("Speed",5),array("Base",2),array("Armor",1),array("Item",1),array("Misc",1));
 			echo '<div class="row">';
 			for($p=0;$p<6;$p++){
 				if($p != 1){
