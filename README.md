@@ -10,4 +10,6 @@ The app is designed to fill in areas of the player sheet that are considered ted
 
 LEGAL INFO
 
+This application was created by Cole Finnie, Kyle Roberts, and Tyler Doan
+
 All terms used by the dungeons and dragons handbooks are property of their respective owners.
